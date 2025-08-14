@@ -1,0 +1,2 @@
+This text is written in the file as a sample text.
+This text has be appened.
