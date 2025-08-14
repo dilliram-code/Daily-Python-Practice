@@ -10,6 +10,7 @@ def create_note():
         f.write(note + '\n')
     print("Note saved!")
 
+
 # create_note()
 
 # view note
@@ -27,6 +28,7 @@ def view_note():
         else:
             print("No note to display.")
 
+
 # view_note()
 
 # search notes
@@ -41,7 +43,60 @@ def search_notes():
                 print(f"{idx}.{line.strip()}")
                 found = True
             if not found:
-                print("No matching not found!")
+                print("No matching note found!")
 
 
 # search_notes()
+
+# delete notes
+
+
+def delete_notes():
+    view_note()
+    try:
+        note_number = int(input("Enter the note number: "))
+        with open(NOTES, 'r') as f:
+            notes = f.readlines()
+            if 1 <= note_number <= len(notes):
+                del notes[note_number - 1]
+                print("Note Deleted!")
+                with open(NOTES, 'w') as f:
+                    f.writelines(notes)
+            else:
+                print("Invalid number!")
+    except ValueError:
+        print("Invalid input!")
+
+
+# delete_notes()
+
+# main function to start the program
+
+
+def start_me():
+    while True:
+        print("\n =======Personal Note Keeper========")
+        print("1. Create note.")
+        print("2. View note.")
+        print("3. Search note.")
+        print("4. Delete note.")
+        print("5. Exit.")
+
+        choice = input("Choose a number: ")
+
+        if choice == "1":
+            create_note()
+        elif choice == "2":
+            view_note()
+        elif choice == "3":
+            search_notes()
+        elif choice == "4":
+            delete_notes()
+        elif choice == "5":
+            break
+        else:
+            print("Invalid choice! Try again.")
+
+
+if __name__ == "__main__":
+    start_me()

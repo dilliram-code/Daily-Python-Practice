@@ -1,4 +1,1 @@
-Dilli Ram Chaudhary
-Dilli Ram Chaudhary
-Buddhabhumi Municipality
-Dilli Ram Chaudhary
+python -u "c:\Users\Dell\OneDrive - MSFT\Desktop\Daily-Python-Practice\day7-file_handling\filehandlingProject\filehandling_miniProject.py"
