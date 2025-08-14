@@ -29,3 +29,13 @@ with open("file2.txt", "a") as f:
 with open("recent.jpg", "wb") as f:
     with open("pexels-1.jpg", "rb" ) as original:
         f.write(original.read())
+        
+        
+# Note: The with statement automatically closes files after use — avoids memory leaks.
+
+# File existence check
+import os
+if os.path.exists("file3.txt"):
+    print("file exists!")
+else: 
+    print("file doesn't exist!")
