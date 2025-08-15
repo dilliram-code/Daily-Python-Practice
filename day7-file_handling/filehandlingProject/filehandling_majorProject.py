@@ -13,7 +13,7 @@ def initiate_note():
     if not os.path.exists(NOTES):
         with open(NOTES, "w", newline="") as f:
             writer = csv.writer(f)
-            writer.writerow(["Timestamp, Category, Note"])
+            writer.writerow(["Timestamp", "Category", "Note"])
 
 # initiate_note()
 
@@ -59,13 +59,14 @@ def view_notes():
             print("Notes not found!")
 
 
-view_notes()
+# view_notes()
 
 
 def searh_notes():
     choice = input(
         "Search by (1) term or (2) by category. Enter 1 or 2 ").strip()
     term = input("Enter the term:").strip()
+    term = term.lower()
     found = False
 
     with open(NOTES, 'r') as f:
@@ -92,7 +93,7 @@ def delete_notes():
         with open(NOTES, 'r') as f:
             reader = list(csv.reader(f))
 
-            if (note_number < 1) or (note_number >= len(reader)):
+            if (note_number < 1) or (note_number >= len(reader) - 1):
                 return
         deleted_note = reader.pop(note_number)
         with open(NOTES, "w") as f:
