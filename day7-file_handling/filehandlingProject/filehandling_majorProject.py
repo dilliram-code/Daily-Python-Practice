@@ -49,13 +49,34 @@ def create_note():
 def view_notes():
     with open(NOTES, 'r', newline="") as f:
         reader = csv.reader(f)
-        next(reader) # skip header
+        next(reader)  # skip header
         notes = list(reader)
-        
+
         if notes:
-            for idx, (timestamp, category, note) in enumerate(notes,1):
-                print(f"{idx}.[{timestamp}] {category} {note}")
+            for idx, (timestamp, category, note) in enumerate(notes, 1):
+                print(f"{idx}.[{timestamp}] ({category}) {note}")
         else:
             print("Notes not found!")
 
-view_notes()
+# view_notes()
+
+
+def searh_notes():
+    choice = input(
+        "Search by (1) term or (2) by category. Enter 1 or 2 ").strip()
+    term = input("Enter the term:").strip()
+    found = False
+
+    with open(NOTES, 'r') as f:
+        reader = csv.reader(f)
+        next(reader)  # skip the header
+
+        for idx, (timestamp, category, note) in enumerate(reader, 1):
+            if ((choice == "1" and term in note.lower()) or (choice == "2" and term in category.lower())):
+                print(f"{idx}.[{timestamp}]({category}){note}")
+                found = True
+    if not found:
+        print("No matching note found!")
+
+# searh_notes()
+
