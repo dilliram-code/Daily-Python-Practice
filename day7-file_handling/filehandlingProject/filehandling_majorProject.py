@@ -58,7 +58,8 @@ def view_notes():
         else:
             print("Notes not found!")
 
-# view_notes()
+
+view_notes()
 
 
 def searh_notes():
@@ -80,3 +81,58 @@ def searh_notes():
 
 # searh_notes()
 
+# delete notes
+
+
+def delete_notes():
+    view_notes()
+    try:
+        note_number = input("Enter the note number to be deleted:")
+        note_number = int(note_number)
+        with open(NOTES, 'r') as f:
+            reader = list(csv.reader(f))
+
+            if (note_number < 1) or (note_number >= len(reader)):
+                return
+        deleted_note = reader.pop(note_number)
+        with open(NOTES, "w") as f:
+            writer = csv.writer(f)
+            writer.writerows(reader)
+        backup_note()
+        print("Deleted note: ", deleted_note)
+
+    except:
+        print("Invalid input!")
+# delete_notes()
+
+# program controller
+
+
+def start_me():
+    initiate_note()
+    while True:
+        print("\n Personal Note Keeper for daily life!")
+        print("Enter 1 to create note.")
+        print("Enter 2 to view note.")
+        print("Enter 3 to search note.")
+        print("Enter 4 to delete note.")
+        print("Enter 5 to quit.")
+        choose_number = input("Enter a number:").strip()
+
+        if choose_number == "1":
+            create_note()
+        elif choose_number == "2":
+            view_notes()
+        elif choose_number == "3":
+            searh_notes()
+        elif choose_number == "4":
+            delete_notes()
+        elif choose_number == "5":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid input! Try again!")
+
+
+if __name__ == "__main__":
+    start_me()
