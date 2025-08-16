@@ -50,7 +50,8 @@ def view_notes():
     with open(NOTES, 'r', newline="") as f:
         reader = csv.reader(f)
         next(reader)  # skip header
-        notes = list(reader)
+        notes = [row for row in reader if row]  # ignore blank rows
+        # notes = list(reader)
 
         if notes:
             for idx, (timestamp, category, note) in enumerate(notes, 1):
@@ -93,7 +94,7 @@ def delete_notes():
         with open(NOTES, 'r') as f:
             reader = list(csv.reader(f))
 
-            if (note_number < 1) or (note_number >= len(reader) - 1):
+            if (note_number < 1) or (note_number >= len(reader)):
                 return
         deleted_note = reader.pop(note_number)
         with open(NOTES, "w") as f:
