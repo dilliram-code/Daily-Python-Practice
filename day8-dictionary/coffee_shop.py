@@ -12,9 +12,10 @@ menu = {
 def show_menu():
     print("\nmilk_tea: 25\nblack_tea: 15\nsamosa: 20\nchaumin: 50\nmomo: 120\npasta: 60\npakauda: 10")
 
-
+def ask_customer():
+    pass
 def your_order():
-    print("\n=================Welcome to our Cafe ===================")
+    print("\n========================= Welcome to our Cafe ==========================")
     print("Following are the today's dishes:")
     show_menu()
     total_price = 0
@@ -44,3 +45,13 @@ def your_order():
 
 
 your_order()
+
+
+
+# response = True
+# while response:
+#     response = input("Would you like to have anything else? yes or no -->")
+#     if response == "yes":
+#         response = True
+#     else:
+#         response: False
