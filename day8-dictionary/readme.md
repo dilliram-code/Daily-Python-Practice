@@ -105,3 +105,27 @@ print(d.get("y"))      # Output: None
 print(d.get("y", 0))   # Output: 0
 
 # print(d["y"])        # ❌ KeyError
+```
+
+### 7. Mutable default values in functions
+- **Avoid using mutable defaults** like `{}` in function parameters.  
+- Using a mutable default can lead to **unexpected behavior**.  
+
+```python
+# ❌ Bad practice
+def add_item(key, value, d={}):
+    d[key] = value
+    return d
+
+print(add_item("a", 1))  # {'a': 1}
+print(add_item("b", 2))  # {'a': 1, 'b': 2}  <-- weird!
+```
+- ***✅ Correct way:***
+
+```python
+def add_item(key, value, d=None):
+    if d is None:
+        d = {}
+    d[key] = value
+    return d
+```
