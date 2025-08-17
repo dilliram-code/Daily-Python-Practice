@@ -35,7 +35,7 @@ print(personal_info["name"])
 print(personal_info.get("age"))
 
 # None (doesn’t crash): It will return None
-print(personal_info.get("country"))    
+print(personal_info.get("country"))
 
 # With default value
 print(personal_info.get("gender", "Male"))
@@ -62,7 +62,7 @@ print(personal_info)  # age key with its value will be gone
 
 
 # Using pop() → removes and returns the value
-pop_item = personal_info.pop("city") # returns city name: Kapilvastu
+pop_item = personal_info.pop("city")  # returns city name: Kapilvastu
 print(pop_item)
 
 # Using popitem() → removes last inserted item
@@ -84,7 +84,7 @@ computer = {
     "storage": 256,
     "windows": 11,
     "dedicated_graphics": True
-    
+
 }
 print("---------------------------------------------------------")
 # keys
@@ -115,7 +115,7 @@ print(computer)
 
 # Nested dictionary
 students = {
-    "101": {"Name":"Ram", "age": 25, "grade": "A+", "district": "Kathmandu"},
+    "101": {"Name": "Ram", "age": 25, "grade": "A+", "district": "Kathmandu"},
     "102": {"Name": "Sita", "age": 20, "grade": "A", "district": "Gulmi"}
 }
 
@@ -125,3 +125,20 @@ print(students['101']['Name'])
 # update nested value
 students['101']['Name'] = "Dilli"
 print(students)
+
+print("---------------------------------------------------------")
+# Dictionary comprehension
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+cubes = {n: n**3 for n in numbers}
+print(cubes)
+
+# Dictionary comprehension using filtering
+natural_num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# squares less than 50
+squares_less_than50 = {n: n**2 for n in natural_num if n**2 < 50}
+print(squares_less_than50)
+
+# even squares
+even_squares = {n: n**2 for n in natural_num if (n**2) % 2 == 0}
+print(even_squares)
