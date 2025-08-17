@@ -180,3 +180,21 @@ print(person)  # {"name": "Rajan", "age": 25}
 person.setdefault("age", 30)
 print(person)  # {"name": "Rajan", "age": 25}
 
+# Python 3.9+ introduced the merge (|) and update (|=) operators.
+old_dict = {
+    "name": "Dilli",
+    "age": 25
+}
+
+new_dict = {
+    "gender": "Male",
+    "city": "Kathmandu"
+}
+
+# merge (| operator)
+print(old_dict | new_dict)
+
+# update (|= operator): updates the first one
+old_dict |= new_dict
+print(old_dict)
+
