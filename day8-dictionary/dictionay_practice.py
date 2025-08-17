@@ -155,8 +155,8 @@ print("Rakesh" in friends)  # True
 print("Dilli" in friends)   # False
 
 # Merge dictionary
-dict_1 = {"a": 1, "b":2, "c":3, "d":4}
-dict_2 = {"e": 5, "f": 6, "g":7, "h": 8}
+dict_1 = {"a": 1, "b": 2, "c": 3, "d": 4}
+dict_2 = {"e": 5, "f": 6, "g": 7, "h": 8}
 
 # method 1: update()
 dict_1.update(dict_2)
@@ -167,3 +167,15 @@ merged_dict = {**dict_1, **dict_2}
 print(merged_dict)
 
 
+# Default dict with sefdefault()
+person = {
+    "name": "Rajan"
+}
+
+# If key doesn't exist, setdefault adds it.
+person.setdefault("age", 25)
+print(person)  # {"name": "Rajan", "age": 25}
+
+# If key exists, setdefault() doesn't overwrite it.
+person.setdefault("age", 30)
+print(person)  # {"name": "Rajan", "age": 25}
