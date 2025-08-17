@@ -26,3 +26,23 @@
 - ✅ Use **immutable types** (`str`, `int`, `tuple`) as keys.  
 - ✅ For missing keys, use **`defaultdict`** or **`setdefault()`**.  
 - ✅ When merging, prefer `{**dict1, **dict2}` for clarity.
+
+## ⚡ Weird or Tricky Things About Python Dictionaries
+
+### 1. Keys must be **hashable (immutable)**
+- Keys in dictionaries must be **hashable**, meaning their value should not change during their lifetime.  
+- ✅ Allowed: `str`, `int`, `tuple` (if it contains only hashable elements).  
+- ❌ Not allowed: `list`, `dict` (since they are mutable).  
+
+```python
+# ✅ Valid keys
+my_dict = {
+    "name": "Alice",
+    42: "Answer",
+    (1, 2): "Tuple as key"
+}
+
+# ❌ Invalid key (raises TypeError)
+my_dict = {
+    [1, 2, 3]: "List as key"   # ❌ Not hashable
+}
