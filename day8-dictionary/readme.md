@@ -79,3 +79,16 @@ d2["a"].append(3)
 
 print(d1)  
 # Output: {'a': [1, 2, 3]}  <-- changed both
+```
+### 5. Merging dictionaries
+- Python **3.9+** introduced the **merge (`|`)** and **update (`|=`)** operators.
+```python
+d1 = {"a": 1, "b": 2}
+d2 = {"b": 3, "c": 4}
+
+print(d1 | d2)   
+# Output: {'a': 1, 'b': 3, 'c': 4}
+
+d1 |= d2
+print(d1)        
+# Output: {'a': 1, 'b': 3, 'c': 4}
