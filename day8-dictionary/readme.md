@@ -92,3 +92,16 @@ print(d1 | d2)
 d1 |= d2
 print(d1)        
 # Output: {'a': 1, 'b': 3, 'c': 4}
+```
+
+### 6. Default dictionary behavior (`get` vs `[]`)
+- Accessing a **missing key** with `[]` raises **KeyError**.  
+- Using `.get()` returns **None** (or a default value you provide).  
+
+```python
+d = {"x": 10}
+
+print(d.get("y"))      # Output: None
+print(d.get("y", 0))   # Output: 0
+
+# print(d["y"])        # ❌ KeyError
