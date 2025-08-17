@@ -18,3 +18,11 @@
 - You care about **ordering** of items.  
 - You don’t need **key-based access**.  
 - Example: Maintaining a sequence of tasks.
+
+## 📌 Dictionary Best Practices
+
+- ✅ Use `.get()` to avoid **KeyError**.  
+- ✅ Prefer **dictionary comprehension** for clean and readable code.  
+- ✅ Use **immutable types** (`str`, `int`, `tuple`) as keys.  
+- ✅ For missing keys, use **`defaultdict`** or **`setdefault()`**.  
+- ✅ When merging, prefer `{**dict1, **dict2}` for clarity.
