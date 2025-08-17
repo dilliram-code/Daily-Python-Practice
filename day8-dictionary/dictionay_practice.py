@@ -142,3 +142,14 @@ print(squares_less_than50)
 # even squares
 even_squares = {n: n**2 for n in natural_num if (n**2) % 2 == 0}
 print(even_squares)
+
+# membership operator with dict: checks key's existence
+friends = {
+    "Rakesh": "Chemist",
+    "Sukrit": "Physicist",
+    "Kedar": "Linguist",
+    "Anup": "Cricketer"
+}
+
+print("Rakesh" in friends)  # True
+print("Dilli" in friends)   # False
