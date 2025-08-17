@@ -86,7 +86,7 @@ computer = {
     "dedicated_graphics": True
     
 }
-print("-------------------------------------------")
+print("---------------------------------------------------------")
 # keys
 for key in computer:
     print(key)
@@ -111,3 +111,17 @@ print(dublicated_coputer)
 # update dictionary
 computer.update({"year": 2025, "ssd_company": "nvidia"})
 print(computer)
+
+
+# Nested dictionary
+students = {
+    "101": {"Name":"Ram", "age": 25, "grade": "A+", "district": "Kathmandu"},
+    "102": {"Name": "Sita", "age": 20, "grade": "A", "district": "Gulmi"}
+}
+
+# Access elements
+print(students['101']['Name'])
+
+# update nested value
+students['101']['Name'] = "Dilli"
+print(students)
