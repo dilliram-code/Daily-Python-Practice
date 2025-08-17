@@ -54,3 +54,15 @@ my_dict = {
 d = {"a": 1, "b": 2, "a": 3}
 print(d)  
 # Output: {'a': 3, 'b': 2}
+```
+
+### 3. Iteration order is **insertion order** (since Python 3.7)
+- Dictionaries preserve the order of insertion of keys.  
+
+```python
+d = {"x": 1, "y": 2, "z": 3}
+print(list(d.keys()))   
+# Output: ['x', 'y', 'z']
+- ⚠️ In older Python versions (<3.7), the order was not guaranteed.
+
+
