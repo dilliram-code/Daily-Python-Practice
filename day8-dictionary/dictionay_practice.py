@@ -153,3 +153,17 @@ friends = {
 
 print("Rakesh" in friends)  # True
 print("Dilli" in friends)   # False
+
+# Merge dictionary
+dict_1 = {"a": 1, "b":2, "c":3, "d":4}
+dict_2 = {"e": 5, "f": 6, "g":7, "h": 8}
+
+# method 1: update()
+dict_1.update(dict_2)
+print(dict_1)
+
+# method 2: dictionary unpacking
+merged_dict = {**dict_1, **dict_2}
+print(merged_dict)
+
+
