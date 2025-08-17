@@ -73,3 +73,41 @@ print(last_item)
 # clear all items and make dictionary empty
 personal_info = personal_info.clear()
 print(personal_info)
+
+
+# Iterating over dictionary
+
+computer = {
+    "brand": "Dell",
+    "gen": "9th",
+    "ram": 8,
+    "storage": 256,
+    "windows": 11,
+    "dedicated_graphics": True
+    
+}
+print("-------------------------------------------")
+# keys
+for key in computer:
+    print(key)
+
+# values
+for values in computer.values():
+    print(values)
+
+# Both keys and values
+for key, value in computer.items():
+    print(f"{key}:{value}")
+
+# common methods
+print(computer.keys())
+print(computer.values())
+print(computer.items())
+
+# copy dictionary
+dublicated_coputer = computer.copy()
+print(dublicated_coputer)
+
+# update dictionary
+computer.update({"year": 2025, "ssd_company": "nvidia"})
+print(computer)
