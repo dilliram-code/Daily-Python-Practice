@@ -63,6 +63,19 @@ print(d)
 d = {"x": 1, "y": 2, "z": 3}
 print(list(d.keys()))   
 # Output: ['x', 'y', 'z']
+```
 - ⚠️ In older Python versions (<3.7), the order was not guaranteed.
 
+### 4. Shallow copies vs Deep copies
+- Using `.copy()` or `dict()` makes a **shallow copy** → nested objects are **shared**.  
+- Use `copy.deepcopy()` for **independent copies**.  
 
+```python
+import copy
+
+d1 = {"a": [1, 2]}
+d2 = d1.copy()
+d2["a"].append(3)
+
+print(d1)  
+# Output: {'a': [1, 2, 3]}  <-- changed both
