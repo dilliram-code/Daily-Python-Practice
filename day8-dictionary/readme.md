@@ -3,3 +3,4 @@
 
 **Keys to Note down**
 - ✅ Keys are unique and must be immutable types (string, number, tuple).
+- ✅ Values can be of any type (list, int, dict, etc.).
