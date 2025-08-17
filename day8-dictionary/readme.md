@@ -46,3 +46,11 @@ my_dict = {
 my_dict = {
     [1, 2, 3]: "List as key"   # ❌ Not hashable
 }
+```
+### 2. Dictionary keys are **unique — last assignment wins**
+- If you repeat a key, the dictionary will **overwrite the earlier value**.  
+
+```python
+d = {"a": 1, "b": 2, "a": 3}
+print(d)  
+# Output: {'a': 3, 'b': 2}
