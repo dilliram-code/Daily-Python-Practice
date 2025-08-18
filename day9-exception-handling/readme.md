@@ -19,3 +19,6 @@ Output:
 ```python 
 ZeroDivisionError: division by zero
 ```
+This stops the program.
+
+- `✅ Solution:` Exception handling allows you to gracefully handle errors, keep the program running, and take appropriate actions instead of crashing.
