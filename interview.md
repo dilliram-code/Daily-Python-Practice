@@ -99,3 +99,5 @@ print(-5 % -2)   # Output: -1
   `-5 % 2 = 1`, `5 % -2 = -1`.  
 - Division by zero → **Error** (Python does not return Infinity).  
 ---
+test bar
+<hr style="border: 2px solid red;">
