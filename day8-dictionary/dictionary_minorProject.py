@@ -52,3 +52,13 @@ def average_grade():
 def average_age():
     pass
 
+
+def start_me():
+    while True:
+        pass
+    
+    
+    
+    
+if __name__ == "__main__":
+    start_me()
