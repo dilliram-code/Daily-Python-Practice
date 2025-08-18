@@ -92,7 +92,11 @@ def update_student_data():
 
 
 def delete_students_detail():
-    pass
+    
+    ''' 
+    ask id, search in the dict, if found the proceed ahead or say thank you!
+    Ask student the record to be deleted, delete the record, update the new dict and display the updated dict
+    '''
 
 
 def search_student():
