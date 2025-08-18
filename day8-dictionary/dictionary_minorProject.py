@@ -11,31 +11,31 @@ print("================== School Management System =================")
 
 '''
 students = {
-    "101": {"name": "Aarav Sharma", "class": 10, "roll_no": 1,
+    "101": {"name": "Aarav Sharma", "class": 10, "rollno": 1,
             "grade": "A", "gender": "Male", "city": "Kathmandu"},
-    "102": {"name": "Sita Rai", "class": 10, "roll_no": 2,
+    "102": {"name": "Sita Rai", "class": 10, "rollno": 2,
                     "grade": "B+", "gender": "Female", "city": "Pokhara"},
-    "103": {"name": "Ram Karki", "class": 9, "roll_no": 3,
+    "103": {"name": "Ram Karki", "class": 9, "rollno": 3,
                     "grade": "A-", "gender": "Male", "city": "Biratnagar"},
-    "104": {"name": "Gita Thapa", "class": 9, "roll_no": 4,
+    "104": {"name": "Gita Thapa", "class": 9, "rollno": 4,
                     "grade": "B", "gender": "Female", "city": "Lalitpur"},
-    "105": {"name": "Prakash Yadav", "class": 10, "roll_no": 5,
+    "105": {"name": "Prakash Yadav", "class": 10, "rollno": 5,
                     "grade": "A", "gender": "Male", "city": "Janakpur"},
-    "106": {"name": "Anita Gurung", "class": 8, "roll_no": 6,
+    "106": {"name": "Anita Gurung", "class": 8, "rollno": 6,
                     "grade": "B+", "gender": "Female", "city": "Pokhara"},
-    "107": {"name": "Krishna Chaudhary", "class": 9, "roll_no": 7,
+    "107": {"name": "Krishna Chaudhary", "class": 9, "rollno": 7,
                     "grade": "A", "gender": "Male", "city": "Dhangadhi"},
-    "108": {"name": "Sunita Shrestha", "class": 10, "roll_no": 8,
+    "108": {"name": "Sunita Shrestha", "class": 10, "rollno": 8,
                     "grade": "A-", "gender": "Female", "city": "Kathmandu"},
-    "109": {"name": "Dipesh KC", "class": 8, "roll_no": 9,
+    "109": {"name": "Dipesh KC", "class": 8, "rollno": 9,
                     "grade": "B", "gender": "Male", "city": "Nepalgunj"},
-    "110": {"name": "Maya Lama", "class": 9, "roll_no": 10,
+    "110": {"name": "Maya Lama", "class": 9, "rollno": 10,
                     "grade": "A", "gender": "Female", "city": "Hetauda"},
 }
 
 
 def add_student_profile():
-    student_id = int(input("What's student's id? ->").strip())
+    student_id = (input("What's student's id? ->").strip())
     student_name = input("Write student's name: ").strip().title()
     student_class = int(input("Write the student's class: ").strip())
     student_rollno = int(input("Write the student's roll no: ").strip())
@@ -46,17 +46,49 @@ def add_student_profile():
     if student_id != "" and student_name != "" and student_class != "" and student_rollno != "" and student_grade != "" and student_gender != "" and student_city != "":
         students[student_id] = {"name": student_name, "class": student_class, "roll_no": student_rollno,
                                 "grade": student_grade, "gender": student_gender, "city": student_city}
-        return students
+        return print(students)
     else:
         print("You missed something to fill.")
 
+# add_student_profile()
 
-updated_record = add_student_profile()
-print(updated_record)
 
 
 def update_student_data():
-    pass
+    sts_id = input("First, give me your id:").strip()
+    if sts_id in students:
+        print("What do you want to update?\n1.name\n2.class\n3.rollno\n4.gender\n5.city\n6.nothing")
+
+        response = input("Please write here: ").lower()
+        if response == "nothing":
+            print("Thank you for visiting!")
+            exit()
+        value = input(f"What is your actual {response} ?")
+        if response == "name":
+            students[sts_id]["name"] = value
+        elif response == "class":
+            students[sts_id]["class"] = value
+        elif response == "rollno":
+            students[sts_id]["rollno"] = value
+        elif response == "gender":
+            students[sts_id]["gender"] = value
+        elif response == "city":
+            students[sts_id]["city"] = value
+        else:
+            print("Thank you!")
+            exit()
+    else:
+        print("Your ID is not found!")
+        exit()
+    your_profile = {"name": students[sts_id]
+                    ["name"], "class": students[sts_id]["class"], "rollno": students[sts_id]["rollno"], "gender": students[sts_id]["gender"], "city": students[sts_id]["city"]}
+    return print("Your updated profile is here:\n", your_profile)
+
+    '''
+    idea: you have to first ask the id of the student, then you have to ask what does the student want to update? according to the answer of the student, I have to assign the value to the particular key. 
+    '''
+# update_student_data()
+
 
 
 def delete_students_detail():
