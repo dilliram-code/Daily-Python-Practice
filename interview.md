@@ -34,3 +34,4 @@ print(z)     # Output: 13.5
 **✅ Key Difference:**
 - Casting = You force it.
 - Coercion = Python forces it.
+---
