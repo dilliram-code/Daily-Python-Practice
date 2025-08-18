@@ -98,3 +98,4 @@ print(-5 % -2)   # Output: -1
 - Modulo (`%`) follows the divisor’s sign:  
   `-5 % 2 = 1`, `5 % -2 = -1`.  
 - Division by zero → **Error** (Python does not return Infinity).  
+---
