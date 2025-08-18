@@ -30,3 +30,7 @@ y = 3.5      # float
 z = x + y    # Python converts int -> float automatically
 print(z)     # Output: 13.5
 ```
+
+**✅ Key Difference:**
+- Casting = You force it.
+- Coercion = Python forces it.
