@@ -24,10 +24,10 @@ This stops the program.
 - `✅ Solution:` Exception handling allows you to gracefully handle errors, keep the program running, and take appropriate actions instead of crashing.
 ---
 
-## 4. Common Built-in Exceptions
+## 2. Common Built-in Exceptions
 
-| **Exception**       | **Cause**                                         |
-|----------------------|--------------------------------------------------|
+| **Exception**       | **Cause**                                        |
+|---------------------|--------------------------------------------------|
 | `ZeroDivisionError` | Division by zero                                 |
 | `ValueError`        | Invalid type conversion (e.g., `int("abc")`)     |
 | `TypeError`         | Operation on incompatible types                  |
@@ -38,3 +38,4 @@ This stops the program.
 | `ImportError`       | Module or object cannot be imported              |
 | `NameError`         | Variable not defined                             |
 | `OSError`           | OS-related errors (e.g., file access issues)     |
+
