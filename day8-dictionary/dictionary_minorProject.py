@@ -53,7 +53,6 @@ def add_student_profile():
 # add_student_profile()
 
 
-
 def update_student_data():
     sts_id = input("First, give me your id:").strip()
     if sts_id in students:
@@ -80,8 +79,10 @@ def update_student_data():
     else:
         print("Your ID is not found!")
         exit()
+
     your_profile = {"name": students[sts_id]
                     ["name"], "class": students[sts_id]["class"], "rollno": students[sts_id]["rollno"], "gender": students[sts_id]["gender"], "city": students[sts_id]["city"]}
+
     return print("Your updated profile is here:\n", your_profile)
 
     '''
@@ -90,14 +91,43 @@ def update_student_data():
 # update_student_data()
 
 
-
 def delete_students_detail():
+    sts_id = input("First, give me your id:").strip()
+    if sts_id in students:
+        your_profile = {"name": students[sts_id]
+                        ["name"], "class": students[sts_id]["class"], "rollno": students[sts_id]["rollno"], "gender": students[sts_id]["gender"], "city": students[sts_id]["city"]}
+        print("your profile is: \n", your_profile)
+        print("What do you want to delete?\n1.name\n2.class\n3.rollno\n4.gender\n5.city\n6.nothing")
+
+        response = input("Please write here: ").lower()
+        if response == "nothing":
+            print("Thank you for visiting!")
+            exit()
+        if response == "name":
+            del students[sts_id]["name"]
+        elif response == "class":
+            del students[sts_id]["class"]
+        elif response == "rollno":
+            del students[sts_id]["rollno"] 
+        elif response == "gender":
+            del students[sts_id]["gender"]
+        elif response == "city":
+            del students[sts_id]["city"]
+        else:
+            print("Your entry is not matched!")
+            exit()
+
+    else:
+        print("Your ID is not found!")
+        exit()
+    updated_profile = students[sts_id]
+    print("Your remaining info are: \n", updated_profile)
     
     ''' 
     ask id, search in the dict, if found the proceed ahead or say thank you!
     Ask student the record to be deleted, delete the record, update the new dict and display the updated dict
     '''
-
+delete_students_detail()
 
 def search_student():
     pass
