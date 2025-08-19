@@ -1,0 +1,10 @@
+ERROR:root:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Dell\AppData\Local\Temp\ipykernel_8264\2748166365.py", line 6, in <module>
+    10 / 0
+ZeroDivisionError: division by zero
+ERROR:root:Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Dell\AppData\Local\Temp\ipykernel_8264\1297942757.py", line 4, in <module>
+    10 / 0
+ZeroDivisionError: division by zero
