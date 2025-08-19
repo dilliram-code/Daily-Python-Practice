@@ -39,3 +39,13 @@ This stops the program.
 | `NameError`         | Variable not defined                             |
 | `OSError`           | OS-related errors (e.g., file access issues)     |
 
+##  3. What is Logging?
+
+**Logging** is the process of recording events that occur when a program runs.  
+
+Unlike using `print()`, logging provides more flexibility and control:  
+
+- 📝 **Keep permanent records** — store logs in files, databases, or monitoring systems.  
+- 📊 **Categorize messages** — separate logs by levels such as *info, warnings, errors, critical issues*.  
+- 🐞 **Debug easily** — trace back when and why something went wrong.  
+- 📡 **Monitor applications** — track performance and issues in real-world production (servers, apps, etc.).  
