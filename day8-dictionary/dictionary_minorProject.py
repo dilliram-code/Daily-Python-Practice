@@ -127,10 +127,14 @@ def delete_students_detail():
     ask id, search in the dict, if found the proceed ahead or say thank you!
     Ask student the record to be deleted, delete the record, update the new dict and display the updated dict
     '''
-delete_students_detail()
+# delete_students_detail()
 
 def search_student():
     pass
+    '''
+    Idea: ask id first or name first, if id matches, then further process. ask name, search name
+    by name. if found, show his detail
+    '''
 
 
 def average_grade():
