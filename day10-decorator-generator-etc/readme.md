@@ -31,6 +31,10 @@ for i in num:
 ## What is Iterable?
 - Iterable is an object, which one can iterate over.
 - It generates an Iterator when passed to iter() method.
+```python
+L = [1,2,3]
+type(L)
+```
 
 ## ✅4. Understanding the Difference Between `a, b = b, a + b` and `a = b; b = a + b`
 
