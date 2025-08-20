@@ -28,6 +28,9 @@ for i in num:
 ## What is Iterator?
 - An iterator is an object that allows the programmer to traverse through a sequence of data without having to store the entire data in the memory.
 
+## What is Iterable?
+- Iterable is an object, which one can iterate over.
+- It generates an Iterator when passed to iter() method.
 
 ## ✅4. Understanding the Difference Between `a, b = b, a + b` and `a = b; b = a + b`
 
