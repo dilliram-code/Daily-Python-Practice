@@ -12,7 +12,7 @@
 - Memory efficient (generates values on the fly)
 - Can represent infinite sequences
 
-## What is an Iteration?
+## ✅3. What is an Iteration?
 - Iteration is a general term for takig each item of something, one after another. Any time you use a loop, explicit or implicit, to go over a group of items, that is iteration.
 ```python
 num = [1,2,3]
@@ -25,9 +25,11 @@ for i in num:
 2
 3
 ```
+## What is Iterator?
+- An iterator is an object that allows the programmer to traverse through a sequence of data without having to store the entire data in the memory.
 
 
-## ✅3. Understanding the Difference Between `a, b = b, a + b` and `a = b; b = a + b`
+## ✅4. Understanding the Difference Between `a, b = b, a + b` and `a = b; b = a + b`
 
 ## 📌 Introduction
 In Python, assignment works differently depending on whether **tuple unpacking** (multiple assignment) is used or not.  
@@ -88,7 +90,7 @@ print(a, b)
 a = b → a = 2
 b = a + b → b = 2 + 2 = 4
 
-## ✅4. Using `_` in Python Loops and Assignments
+## ✅5. Using `_` in Python Loops and Assignments
 
 In Python, the underscore `_` is often used as a **throwaway variable** — meaning the value exists but we don’t care about it.  
 
@@ -122,7 +124,7 @@ The middle value 2 is ignored using _.
 - _ is used in loops or unpacking when the value is not important.
 - It improves readability and clearly shows intent.
 
-## ✅5. What is an Iterator?
+## ✅6. What is an Iterator?
 An **iterator** is an object that implements:
 - `__iter__()` → returns the iterator object itself.
 - `__next__()` → returns the next value from the sequence.  
