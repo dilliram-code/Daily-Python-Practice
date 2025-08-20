@@ -107,3 +107,17 @@ The middle value 2 is ignored using _.
 
 - _ is used in loops or unpacking when the value is not important.
 - It improves readability and clearly shows intent.
+
+## ✅5. What is an Iterator?
+An **iterator** is an object that implements:
+- `__iter__()` → returns the iterator object itself.
+- `__next__()` → returns the next value from the sequence.  
+  When no items are left, it raises a `StopIteration` exception.
+
+  **More explanation on Iterator**
+- An iterator in Python is an object that contains a countable number of elements that can be iterated upon. In simpler words, we can say that Iterators are objects that allow you to traverse through all the elements of a collection and return one element at a time. More specifically, we say that an iterator is an object that implements the iterator protocol.
+
+- Lists, tuples, dictionaries, strings and sets are all iterable objects. They are iterable containers that you can convert into an iterator.
+
+**‼Note:**
+- Note that every iterator is also an iterable, but not every iterable is an iterator. For example, a tuple is iterable, but it is not an iterator. An iterator can be created from an iterable by using the function iter(). Thus, when we pass this tuple to an iter() function, we will get an iterator.
