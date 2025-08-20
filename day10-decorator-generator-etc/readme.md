@@ -13,7 +13,7 @@
 
 - Can represent infinite sequences
 
-## ✅2. Understanding the Difference Between `a, b = b, a + b` and `a = b; b = a + b`
+## ✅3. Understanding the Difference Between `a, b = b, a + b` and `a = b; b = a + b`
 
 ## 📌 Introduction
 In Python, assignment works differently depending on whether **tuple unpacking** (multiple assignment) is used or not.  
@@ -73,3 +73,37 @@ print(a, b)
 ✔ Explanation:
 a = b → a = 2
 b = a + b → b = 2 + 2 = 4
+
+## ✅4. Using `_` in Python Loops and Assignments
+
+In Python, the underscore `_` is often used as a **throwaway variable** — meaning the value exists but we don’t care about it.  
+
+It’s a convention to say:  
+👉 *“I know there’s a value here, but I don’t need it.”*  
+
+---
+
+## 🔹 Example 1: Repeat something `N` times  
+
+```python
+for _ in range(5):
+    print("Hello")
+
+    # output:
+    Hello
+    Hello
+    Hello
+    Hello
+    Hello
+```
+## 🔹 Example 2: Ignoring multiple values in unpacking
+```python
+a, _, c = (1, 2, 3)
+print(a, c)
+```
+The middle value 2 is ignored using _.
+
+## **✅ Summary**
+
+- _ is used in loops or unpacking when the value is not important.
+- It improves readability and clearly shows intent.
