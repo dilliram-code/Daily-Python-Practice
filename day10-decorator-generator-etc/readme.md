@@ -10,8 +10,22 @@
 ***Advantages:***
 
 - Memory efficient (generates values on the fly)
-
 - Can represent infinite sequences
+
+## What is an Iteration?
+- Iteration is a general term for takig each item of something, one after another. Any time you use a loop, explicit or implicit, to go over a group of items, that is iteration.
+```python
+num = [1,2,3]
+
+for i in num:
+  print(i)
+
+# output:
+1
+2
+3
+```
+
 
 ## ✅3. Understanding the Difference Between `a, b = b, a + b` and `a = b; b = a + b`
 
