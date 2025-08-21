@@ -156,15 +156,15 @@ def average_grade():
                    education + social + economics)/7
         average_gpa = average / 25
 
-        return print("Your average grade gpa is: ", average_gpa)
+        return print(f"===========================================================\nCongratulations, {students[sts_id]['name']}\nYour gpa is: ", average_gpa)
 
     else:
         print("Your ID is not found!")
         exit()
 average_grade()
 
-def average_age():
-    pass
+
+
 
 
 # def start_me():
