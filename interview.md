@@ -100,3 +100,50 @@ print(-5 % -2)   # Output: -1
 - Division by zero → **Error** (Python does not return Infinity).  
 ---
 
+# 🐍 Objects in Python
+
+In Python, **everything is an object**:  
+Numbers, strings, functions, classes, and even instances are all objects.
+
+An **object** bundles three key things:
+
+---
+
+## 🔹 1. Identity
+
+- Each object has a unique identity during its lifetime.  
+- You can check it with:
+  ```python
+  x = 42
+  print(id(x))   # unique identifier (like memory address)
+
+## 🔹 2. Type
+
+- The type defines what kind of object it is and what it can do.
+- Determines behavior (methods, operators).
+```python
+x = 42
+print(type(x))   # <class 'int'>
+```
+## 🔹 3. State (Attributes)
+
+- Represents the object’s data.
+- Stored in attributes (obj.__dict__ for most user-defined objects).
+```python
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+d = Dog("Buddy")
+print(d.__dict__)   # {'name': 'Buddy'}
+```
+### ✅ Summary
+
+- Identity → "Who" the object is (id).
+
+- Type → "What" the object is (type).
+
+- State → "What data" the object holds (attributes).
+
+`📌 In short:`
+- Objects in Python = Identity + Type + State
