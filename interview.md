@@ -207,3 +207,7 @@ for val in generator_function(5):
 
 - Data size is huge (big lists, streams, files, API data)
 - You want memory efficiency and lazy evaluation
+
+`👉 In short:`
+- Normal function = "Cook all food at once and serve."
+- Generator = "Serve food one plate at a time when asked."
