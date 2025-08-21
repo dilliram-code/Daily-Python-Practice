@@ -211,3 +211,4 @@ for val in generator_function(5):
 `👉 In short:`
 - Normal function = "Cook all food at once and serve."
 - Generator = "Serve food one plate at a time when asked."
+---
