@@ -147,3 +147,26 @@ print(d.__dict__)   # {'name': 'Buddy'}
 
 `📌 In short:`
 - Objects in Python = Identity + Type + State
+
+# 🔹 Normal Function vs Generator
+## `1. Normal Function`
+
+- A normal function in Python executes all its statements at once.
+- It returns a value (using return) and terminates immediately.
+- Each call creates a new function frame in memory, so intermediate states are lost.
+- If you want a sequence of results, you must either return a list or call it repeatedly.
+
+`👉 Example:`
+```python
+def normal_function(n):
+    result = []
+    for i in range(1, n+1):
+        result.append(i*i)
+    return result
+
+print(normal_function(5))  
+# Output: [1, 4, 9, 16, 25]
+
+```
+- Here, all squares are calculated at once and stored in memory before being returned.
+- Memory heavy for large values of `n`.

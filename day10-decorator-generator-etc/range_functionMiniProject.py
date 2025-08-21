@@ -1,3 +1,4 @@
+# Iterable
 class MyRange_Class:
   def __init__(self, start, end):
     self.start = start
@@ -5,7 +6,8 @@ class MyRange_Class:
     
   def __iter__(self):
     return My_Iterator(self)    # return the object of this class.
-  
+
+# Iterator
 class My_Iterator:
   def __init__(self, iterable_obj):  # receive the object from upper class
     self.iterable = iterable_obj
