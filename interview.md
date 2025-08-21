@@ -170,3 +170,40 @@ print(normal_function(5))
 ```
 - Here, all squares are calculated at once and stored in memory before being returned.
 - Memory heavy for large values of `n`.
+
+## `2. Generator Function`
+
+- A generator function looks like a normal function but uses yield instead of return.
+- Instead of computing everything at once, it produces values one at a time when requested (lazy evaluation).
+- Generators remember their state between calls (where they left off).
+- They are memory-efficient because they don’t store the entire result in memory.
+
+`👉 Example:`
+```python
+def generator_function(n):
+    for i in range(1, n+1):
+        yield i*i   # yield produces values one at a time
+
+gen = generator_function(5)
+
+print(next(gen))  # 1
+print(next(gen))  # 4
+print(next(gen))  # 9
+
+# Or iterate fully
+for val in generator_function(5):
+    print(val)
+# Output: 1, 4, 9, 16, 25
+
+```
+# 🔹 When to Use Which?
+
+`✅ Use normal functions when:`
+
+- Data size is small
+- You need random access to results
+
+`✅ Use generators when:`
+
+- Data size is huge (big lists, streams, files, API data)
+- You want memory efficiency and lazy evaluation
