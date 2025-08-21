@@ -232,3 +232,24 @@ print(square_numbers(5))
 ```
 - Here, the function builds the whole list in memory and returns it at once.
 - After return, the function is done and cannot be resumed.
+
+`2. yield`
+
+- Turns a normal function into a generator.
+- Does not end the function immediately.
+- Saves the state of the function (local variables, position in loop).
+- Allows resumption from where it left off.
+- Produces values one at a time (lazy evaluation).
+```python
+def square_numbers_gen(n):
+    for i in range(1, n+1):
+        yield i * i   # yields one value at a time
+
+gen = square_numbers_gen(5)
+
+print(next(gen))  # 1
+print(next(gen))  # 4
+print(list(gen))  # [9, 16, 25] -> continues from where it left
+
+```
+- With yield, the function pauses at each value, remembers where it was, and continues next time.
