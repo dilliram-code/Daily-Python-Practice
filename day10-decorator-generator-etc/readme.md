@@ -7,6 +7,7 @@
 ## ✅2. What is a generator?
 
 - A generator is a lazy iterator that produces items on demand using yield. It avoids storing all values in memory.
+- 
 ***Advantages:***
 
 - Memory efficient (generates values on the fly)
