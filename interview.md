@@ -212,3 +212,23 @@ for val in generator_function(5):
 - Normal function = "Cook all food at once and serve."
 - Generator = "Serve food one plate at a time when asked."
 ---
+
+## 🔹 return vs yield in Python
+`1. return`
+
+- Ends the function immediately.
+- Sends back one value (or object) to the caller.
+- Function cannot be resumed once it has returned.
+```python 
+def square_numbers(n):
+    result = []
+    for i in range(1, n+1):
+        result.append(i * i)
+    return result
+
+print(square_numbers(5))
+# output: [1, 4, 9, 16, 25]
+
+```
+- Here, the function builds the whole list in memory and returns it at once.
+- After return, the function is done and cannot be resumed.
