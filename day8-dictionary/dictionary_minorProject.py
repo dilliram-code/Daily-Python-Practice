@@ -108,7 +108,7 @@ def delete_students_detail():
         elif response == "class":
             del students[sts_id]["class"]
         elif response == "rollno":
-            del students[sts_id]["rollno"] 
+            del students[sts_id]["rollno"]
         elif response == "gender":
             del students[sts_id]["gender"]
         elif response == "city":
@@ -122,12 +122,13 @@ def delete_students_detail():
         exit()
     updated_profile = students[sts_id]
     print("Your remaining info are: \n", updated_profile)
-    
+
     ''' 
     ask id, search in the dict, if found the proceed ahead or say thank you!
     Ask student the record to be deleted, delete the record, update the new dict and display the updated dict
     '''
 # delete_students_detail()
+
 
 def search_student():
     pass
@@ -138,8 +139,29 @@ def search_student():
 
 
 def average_grade():
-    pass
+    sts_id = input("First, give me your id:").strip()
+    if sts_id in students:
+        your_profile = {"name": students[sts_id]
+                        ["name"], "class": students[sts_id]["class"], "rollno": students[sts_id]["rollno"], "gender": students[sts_id]["gender"], "city": students[sts_id]["city"]}
+        print("your profile is: \n", your_profile)
+        math = int(input("Your marks in Math:"))
+        nepali = int(input("Your marks in Nepali:"))
+        english = int(input("Your marks in English:"))
+        science = int(input("Your marks in Science:"))
+        education = int(input("Your marks in Education:"))
+        social = int(input("Your marks in Social:"))
+        economics = int(input("Your marks in Economics:"))
 
+        average = (math + nepali + english + science +
+                   education + social + economics)/7
+        average_gpa = average / 25
+
+        return print("Your average grade gpa is: ", average_gpa)
+
+    else:
+        print("Your ID is not found!")
+        exit()
+average_grade()
 
 def average_age():
     pass
