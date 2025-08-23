@@ -285,7 +285,7 @@ o global`
 ---
 ## Better Alternatives to `global`
 
-`Pass variables as parameters:`
+`1.Pass variables as parameters:`
 ```python
 def change(x):
     return x + 5
@@ -293,5 +293,20 @@ def change(x):
 value = 10
 value = change(value)
 print(value)   # 15
+
+```
+`2.Use classes and objects (encapsulation):`
+```python
+class Counter:
+    def __init__(self):
+        self.count = 0
+
+    def increment(self):
+        self.count += 1
+
+c = Counter()
+c.increment()
+c.increment()
+print(c.count)   # 2
 
 ```
