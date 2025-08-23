@@ -145,3 +145,17 @@ An **iterator** is an object that implements:
 
 **‼Note:**
 - Note that every iterator is also an iterable, but not every iterable is an iterator. For example, a tuple is iterable, but it is not an iterator. An iterator can be created from an iterable by using the function iter(). Thus, when we pass this tuple to an iter() function, we will get an iterator.
+---
+
+## 📌 Global Keyword in Python — From Scratch to Advanced
+
+- In Python, variables defined outside of any function or class are global variables.
+- They can be accessed anywhere in the file (inside or outside a function).
+```python
+x = 10   # global variable
+
+def show():
+    print(x)   # can access directly
+
+show()  # Output: 10
+```
