@@ -159,3 +159,5 @@ def show():
 
 show()  # Output: 10
 ```
+`But there’s a catch:`
+- 👉 If you try to modify a global variable inside a function without declaring it as global, Python creates a new local variable instead, leaving the global variable unchanged.
