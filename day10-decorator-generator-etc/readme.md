@@ -226,3 +226,8 @@ increment()
 decrement()
 print(counter)  # 🤔 Output: 1
 ```
+`🔎 Problem:`
+
+- You need to mentally track all functions that modify counter.
+
+- In larger programs, this leads to bugs that are hard to debug.
