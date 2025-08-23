@@ -149,6 +149,7 @@ An **iterator** is an object that implements:
 
 ## 📌 Global Keyword in Python — From Scratch to Advanced
 
+### ✅1. What is a Global Variable?
 - In Python, variables defined outside of any function or class are global variables.
 - They can be accessed anywhere in the file (inside or outside a function).
 ```python
@@ -161,3 +162,22 @@ show()  # Output: 10
 ```
 `But there’s a catch:`
 - 👉 If you try to modify a global variable inside a function without declaring it as global, Python creates a new local variable instead, leaving the global variable unchanged.
+
+### ✅2. The Problem Without global
+```python
+x = 10
+
+def change():
+    x = x + 5   # ❌ ERROR: local variable referenced before assignment
+    print(x)
+
+change()
+
+```
+🔎 Why error?
+
+- When Python sees `x = x + 5`, it assumes the left-hand side (x) is a new local variable.
+
+- But the right-hand side (`x`) tries to read from local x which doesn’t exist yet.
+
+- Result: `UnboundLocalError`.
