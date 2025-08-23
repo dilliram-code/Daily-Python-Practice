@@ -203,7 +203,7 @@ print("Outside function:", x)
 ```
 `Note:`
 - So, global allows functions to modify global state.
-
+---
 ## Issues with global
 
 Now let’s explore problems step by step.
@@ -281,3 +281,17 @@ print(count)   # 🤔 Not always 500000
 - When dealing with constants (but better to use ALL_CAPS and avoid modifying them).
 
 - When you really need to modify state across functions, and alternatives (like return values or classes) are overkill.
+o global`
+---
+## Better Alternatives to `global`
+
+`Pass variables as parameters:`
+```python
+def change(x):
+    return x + 5
+
+value = 10
+value = change(value)
+print(value)   # 15
+
+```
