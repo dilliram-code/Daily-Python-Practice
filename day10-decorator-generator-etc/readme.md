@@ -125,7 +125,7 @@ for _ in range(5):
 a, _, c = (1, 2, 3)
 print(a, c)
 ```
-The middle value 2 is ignored using _.
+The middle value 2 is ignored using `_`.
 
 ## **✅ Summary**
 
@@ -196,4 +196,33 @@ def change():
 
 change()
 print("Outside function:", x)
+
+# Inside function: 15
+# Outside function: 15
+
+```
+`Note:`
+- So, global allows functions to modify global state.
+
+## Issues with global
+
+Now let’s explore problems step by step.
+`✅Issue 1`: Unintended Side Effects
+
+- If multiple functions modify the same global variable, tracking changes becomes difficult.
+```python
+counter = 0
+
+def increment():
+    global counter
+    counter += 1
+
+def decrement():
+    global counter
+    counter -= 1
+
+increment()
+increment()
+decrement()
+print(counter)  # 🤔 Output: 1
 ```
