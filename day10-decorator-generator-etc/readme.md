@@ -273,3 +273,11 @@ print(count)   # 🤔 Not always 500000
 - Because multiple threads are modifying count simultaneously, causing inconsistent results.
 
 - This happens because global doesn’t give atomic operations.
+
+`When to Use global`
+
+- When writing small scripts (quick hacks, one-file programs).
+
+- When dealing with constants (but better to use ALL_CAPS and avoid modifying them).
+
+- When you really need to modify state across functions, and alternatives (like return values or classes) are overkill.
