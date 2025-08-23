@@ -229,5 +229,47 @@ print(counter)  # 🤔 Output: 1
 `🔎 Problem:`
 
 - You need to mentally track all functions that modify counter.
-
 - In larger programs, this leads to bugs that are hard to debug.
+
+`✅Issue 2`: Debugging Becomes Hard
+
+- If a function unexpectedly changes a global variable, finding the source of the bug can be tricky.
+```python
+x = 100
+
+def buggy_function():
+    global x
+    x = "oops string now"
+
+buggy_function()
+print(x * 2)  # ❌ TypeError: can't multiply sequence by non-int
+```
+`✅Issue 3`: Thread Safety Problems (Advanced)
+
+- If multiple threads are modifying a global variable, you can run into race conditions.
+```python
+import threading
+
+count = 0
+
+def increment():
+    global count
+    for _ in range(100000):
+        count += 1
+
+threads = []
+for _ in range(5):   # 5 threads
+    t = threading.Thread(target=increment)
+    t.start()
+    threads.append(t)
+
+for t in threads:
+    t.join()
+
+print(count)   # 🤔 Not always 500000
+```
+`🔎 Why?`
+
+- Because multiple threads are modifying count simultaneously, causing inconsistent results.
+
+- This happens because global doesn’t give atomic operations.
