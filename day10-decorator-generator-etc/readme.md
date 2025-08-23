@@ -310,3 +310,18 @@ c.increment()
 print(c.count)   # 2
 
 ```
+`3.Use nonlocal for nested functions:`
+```python
+def outer():
+    count = 0
+    def inner():
+        nonlocal count
+        count += 1
+        return count
+    return inner
+
+counter = outer()
+print(counter())  # 1
+print(counter())  # 2
+
+```
