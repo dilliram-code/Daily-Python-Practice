@@ -181,3 +181,19 @@ change()
 - But the right-hand side (`x`) tries to read from local x which doesn’t exist yet.
 
 - Result: `UnboundLocalError`.
+
+### ✅ 3. Using global to Fix It
+
+- The global keyword tells Python: “Don’t create a new local variable, use the one from the global scope.”
+
+```python
+x = 10
+
+def change():
+    global x
+    x = x + 5
+    print("Inside function:", x)
+
+change()
+print("Outside function:", x)
+```
