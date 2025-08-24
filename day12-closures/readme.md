@@ -36,3 +36,35 @@ my_func()
 - The nested function must refer to a variable from the enclosing scope.
 
 - The outer function must return the nested function.
+
+
+
+## 🎯 Interview Q&A on Python Closures
+`Q1. Why do we use closures instead of global variables?`
+
+- Closures allow state preservation without polluting the global scope. They are safer and prevent naming conflicts.
+
+`Q2. What are the requirements for a closure?`
+
+- Nested function.
+
+- Inner function refers to outer scope variable.
+
+- Outer function returns inner function.
+
+`Q3. How do closures relate to decorators?`
+
+- Decorators in Python are built on closures. A decorator is essentially a closure that takes a function and returns a modified function.
+
+`Q4. What is the late binding problem in closures?`
+
+- Closures capture variables, not values. If the variable changes later, all closures referencing it will see the updated value.
+`✅ Fix: use default arguments (def f(x=x):).`
+
+`Q5. How to check if a function is a closure?`
+
+- Check __closure__ attribute. If not None, the function has closed-over variables.
+
+`Q6. Compare closures with classes.`
+
+- Closures can encapsulate state like objects, but classes are more structured and support inheritance. Closures are lighter when only data hiding and function factory behavior is needed.
