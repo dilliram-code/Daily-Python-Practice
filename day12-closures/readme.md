@@ -68,3 +68,21 @@ my_func()
 `Q6. Compare closures with classes.`
 
 - Closures can encapsulate state like objects, but classes are more structured and support inheritance. Closures are lighter when only data hiding and function factory behavior is needed.
+
+
+### 🔹 Interview QnA on Closures and State Tracking
+
+`Q1: What is a closure in Python?`
+- A closure is a function object that has access to variables from its enclosing scope, even after that scope has finished execution.
+
+`Q2: Why are closures useful for state tracking?`
+- They allow you to maintain state across function calls without using global variables or class instances.
+
+`Q3: What role does nonlocal play in closures?`
+- nonlocal allows you to modify a variable from the nearest enclosing (non-global) scope inside a nested function.
+
+`Q4: Give a real-world use case of closures.`
+- Implementing counters, caching, decorators, login attempt tracking, or API rate limiting.
+
+`Q5: How is closure-based state tracking different from using classes?`
+- Closures are functional and encapsulate state via nested functions, while classes encapsulate state via attributes. Closures are often more lightweight and useful for small, functional-style stateful logic.
