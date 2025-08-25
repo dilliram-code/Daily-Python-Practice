@@ -14,3 +14,23 @@
 ```python
 RecursionError: maximum recursion depth exceeded
 ```
+### 🚩 Drawbacks of Using Recursion in Python
+`1. High Memory Usage (Stack Overflow Risk)`
+
+- Each recursive call adds a new frame to the call stack. Too many calls can cause a stack overflow error.
+
+- Example: Factorial Function (deep recursion)
+```python
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+# This will cause RecursionError
+print(factorial(2000))
+
+```
+`🔴 Error:`
+```python
+RecursionError: maximum recursion depth exceeded in comparison
+```
