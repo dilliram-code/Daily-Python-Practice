@@ -253,3 +253,4 @@ print(list(gen))  # [9, 16, 25] -> continues from where it left
 
 ```
 - With yield, the function pauses at each value, remembers where it was, and continues next time.
+
