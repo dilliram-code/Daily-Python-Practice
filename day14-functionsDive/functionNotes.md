@@ -24,3 +24,17 @@ print(greet("Aarav"))  # Hello, Aarav!
 - The body runs only when the function is called.
 
 - `-> str` is a return annotation (optional); not enforced at runtime.
+
+Parameters & arguments (all forms)
+
+- Python supports many parameter styles. Understand these well.
+
+`1. Positional and keyword arguments`
+```python
+def f(a, b, c=3):
+    return a + b + c
+
+f(1, 2)         # positional: a=1, b=2, c=3
+f(1, b=2, c=5)  # mix of positional and keywords
+
+```
