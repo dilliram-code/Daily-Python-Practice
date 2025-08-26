@@ -34,3 +34,23 @@ print(factorial(2000))
 ```python
 RecursionError: maximum recursion depth exceeded in comparison
 ```
+`👉 By default, Python’s recursion depth is limited (~1000).`
+
+
+`✅ Summary`
+
+- Stack Overflow (RecursionError for deep recursion).
+
+- Slower execution due to function call overhead.
+
+- Harder to debug and trace compared to iteration.
+
+- Memory inefficiency with immutable objects (like list slicing).
+
+- Not beginner-friendly in many cases.
+
+`👉 Rule of thumb:`
+
+- Use recursion for problems with natural recursive structure (tree traversals, divide-and-conquer).
+
+- Use loops for simple repetitive tasks (factorial, Fibonacci, summation).
