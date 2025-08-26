@@ -38,3 +38,16 @@ f(1, 2)         # positional: a=1, b=2, c=3
 f(1, b=2, c=5)  # mix of positional and keywords
 
 ```
+
+`2.Var positional (*args) and var keyword (**kwargs)`
+
+```python
+def f(*args, **kwargs):
+    print("args:", args)
+    print("kwargs:", kwargs)
+
+f(1, 2, a=3, b=4)
+# args: (1, 2)
+# kwargs: {'a': 3, 'b': 4}
+
+```
