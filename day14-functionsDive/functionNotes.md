@@ -81,3 +81,30 @@ print(list(result))
 
 # [1, 4, 9, 16, 25]
 ```
+Here:
+
+- The function square() is applied to each element of numbers.
+
+**2. filter() Function**
+
+✅ Syntax:
+```python
+filter(function, iterable)
+```
+- function → Must return True or False.
+
+- iterable → Items will be passed to the function, and only those returning True remain.
+
+It returns a filter object (an iterator).
+
+`🟢 Basic Example:`
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+
+def is_even(x):
+    return x % 2 == 0
+
+result = filter(is_even, numbers)
+print(list(result))   # [2, 4, 6]
+
+```
