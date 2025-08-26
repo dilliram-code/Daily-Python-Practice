@@ -51,3 +51,33 @@ f(1, 2, a=3, b=4)
 # kwargs: {'a': 3, 'b': 4}
 
 ```
+
+## 🚀 Python map(), filter(), and reduce() — Complete Guide
+These three functions are functional programming tools in Python. They help process collections (like lists, tuples, sets) without writing explicit `for` loops.
+
+- They use iterators under the hood, which means they are memory efficient and can handle large data streams.
+
+**1. map() Function**
+
+✅ Syntax:
+```python
+map(function, iterable)
+```
+- function → A function that will be applied to each item in the iterable.
+
+- iterable → Any iterable (list, tuple, set, etc.).
+
+It returns a map object (an iterator), which can be converted to a list, tuple, etc.
+
+`🟢 Basic Example:`
+```python
+numbers = [1, 2, 3, 4, 5]
+
+def square(x):
+    return x * x
+
+result = map(square, numbers)
+print(list(result))   
+
+# [1, 4, 9, 16, 25]
+```
