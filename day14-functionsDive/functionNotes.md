@@ -145,3 +145,32 @@ print(result)
 Here:
 
 - (((1+2)+3)+4)+5 = 15
+
+**🟩 What is a Lambda Function?**
+
+- A lambda function is a small, anonymous function in Python.
+
+- Anonymous means it doesn’t need a name (like `def`).
+
+- It can take any number of arguments but can only contain one expression.
+
+`✅ Syntax:`
+```python
+lambda arguments: expression
+```
+- lambda → keyword.
+- arguments → input parameters (like in normal functions).
+- expression → a single expression whose result is automatically returned.
+
+`🟢 Basic Example:`
+```python
+square = lambda x: x ** 2
+print(square(5))   
+
+# 25
+```
+equivalent to:
+```python
+def square(x):
+    return x ** 2
+```
