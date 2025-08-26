@@ -108,3 +108,40 @@ result = filter(is_even, numbers)
 print(list(result))   # [2, 4, 6]
 
 ```
+
+**3. reduce() Function**
+
+- Unlike map and filter, reduce() is not built-in in Python 3.
+- You must import it:
+```python
+from functools import reduce
+```
+✅ Syntax:
+```python
+reduce(function, iterable[, initializer])
+```
+- function → A function that takes two arguments.
+
+- iterable → Sequence to process.
+
+- initializer → Optional starting value.
+
+It applies the function cumulatively, reducing the iterable to a single value.
+
+`🟢 Basic Example:`
+```python
+from functools import reduce
+
+numbers = [1, 2, 3, 4, 5]
+
+def add(x, y):
+    return x + y
+
+result = reduce(add, numbers)
+print(result)   
+
+# 15
+```
+Here:
+
+- (((1+2)+3)+4)+5 = 15
