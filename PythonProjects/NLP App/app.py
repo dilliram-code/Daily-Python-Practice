@@ -36,7 +36,9 @@ class NLPApp:
     label3 = Label(self.root, text="Not a member?")
     label3.pack(pady=(20, 10))
     
-    redirect_btn = Label(self.root, text="Register Now")
+    redirect_btn = Button(self.root, text="Register Now", command=self.register_gui)
     redirect_btn.pack(pady=(10,10))
     
+  def register_gui(self):
+    print("I am from register gui!")
 nlp = NLPApp()
