@@ -27,7 +27,7 @@ class NLPApp:
     label2 = Label(self.root, text="Enter password")
     label2.pack(pady=(10, 10))
 
-    self.password_input = Entry(self.root, width=40)
+    self.password_input = Entry(self.root, width=40, show='*')
     self.password_input.pack(pady=(5, 10), ipady=4)
     
     login_btn = Button(self.root, text="Login", width=30, height=2)
