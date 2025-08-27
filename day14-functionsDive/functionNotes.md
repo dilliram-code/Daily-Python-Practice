@@ -146,6 +146,12 @@ Here:
 
 - (((1+2)+3)+4)+5 = 15
 
+`When to Use?`
+
+- Use map when you want to transform each element.
+- Use filter when you want to select elements based on a condition.
+- Use reduce when you want to combine elements into a single result.
+
 **🟩 What is a Lambda Function?**
 
 - A lambda function is a small, anonymous function in Python.
