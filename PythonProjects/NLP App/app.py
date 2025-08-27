@@ -23,4 +23,10 @@ class NLPApp:
     
     self.email_input = Entry(self.root, width=40)
     self.email_input.pack(pady=(5,10), ipady=4)
+    
+    label2 = Label(self.root, text="Enter password")
+    label2.pack(pady=(10, 10))
+
+    self.password_input = Entry(self.root, width=40)
+    self.password_input.pack(pady=(5, 10), ipady=4)
 nlp = NLPApp()
