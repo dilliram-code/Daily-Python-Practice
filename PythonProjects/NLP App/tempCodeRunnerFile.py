@@ -1,0 +1,1 @@
+self.root.iconbitmap("resources\image.ico")
