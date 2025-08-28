@@ -152,6 +152,25 @@ Here:
 - Use filter when you want to select elements based on a condition.
 - Use reduce when you want to combine elements into a single result.
 
+**🟩What is zip()?**
+
+- The built-in `zip()` function is used to combine two or more iterables (like lists, tuples, strings, etc.) into a single iterable of tuples, where each tuple contains one element from each iterable.
+
+`👉 Think of a zipper joining two chains together → that’s how zip() works.`
+```python
+zip(iterable1, iterable2, ...)
+```
+Basic Example:
+```python
+names = ["Alice", "Bob", "Charlie"]
+scores = [85, 92, 78]
+
+zipped = zip(names, scores)   # returns a zip object
+print(list(zipped))  
+# Output: [('Alice', 85), ('Bob', 92), ('Charlie', 78)]
+```
+`🔑 Each tuple pairs the elements from the same index.`
+
 **🟩 What is a Lambda Function?**
 
 - A lambda function is a small, anonymous function in Python.
