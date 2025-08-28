@@ -40,5 +40,7 @@ class NLPApp:
     redirect_btn.pack(pady=(10,10))
     
   def register_gui(self):
-    print("I am from register gui!")
+    # clear the existing gui
+    for i in self.root.pack_slaves():
+      print(i.destroy())
 nlp = NLPApp()
