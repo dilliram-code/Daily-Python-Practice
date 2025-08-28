@@ -171,6 +171,27 @@ print(list(zipped))
 ```
 `🔑 Each tuple pairs the elements from the same index.`
 
+**🟩 What is enumerate()?**
+
+- The built-in enumerate() function is used when you want both the index and the value while looping over an iterable.
+```python
+enumerate(iterable, start=0)
+```
+- iterable: list, tuple, string, etc.
+- start: index to begin from (default is 0).
+
+```python
+fruits = ["apple", "banana", "cherry"]
+
+for index, fruit in enumerate(fruits):
+    print(index, fruit)
+
+# Output:
+# 0 apple
+# 1 banana
+# 2 cherry
+```
+
 **🟩 What is a Lambda Function?**
 
 - A lambda function is a small, anonymous function in Python.
