@@ -191,6 +191,9 @@ for index, fruit in enumerate(fruits):
 # 1 banana
 # 2 cherry
 ```
+`Key Takeaways:`
+- ✅ zip() → Combine multiple iterables element-wise.
+- ✅ enumerate() → Loop with index and value together.
 
 **🟩 What is a Lambda Function?**
 
