@@ -13,6 +13,18 @@ Key points:
 - `self` is just a name — you could use `this` or `me`, but `self` is the universal convention.
 
 - Methods are functions that expect the instance as their first argument. When you call `obj.method(args...)`, Python implicitly passes obj as the first argument.
+```python
+class Counter:
+    def __init__(self, start=0):
+        self.count = start  # store on the instance
+
+    def increment(self, n=1):
+        self.count += n
+
+c = Counter(10)
+c.increment(2)        # behind the scenes: Counter.increment(c, 2)
+print(c.count)        # 12
+```
 
 **3 — What is __init__?**
 
