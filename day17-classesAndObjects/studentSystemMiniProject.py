@@ -21,3 +21,14 @@ class Classroom:
     for s in self.students:
       s.display()
 
+student1 = Student("Dilli", 1, 30, 85)
+student2 = Student("Bob", 2, 25, 90)
+
+c = Classroom("Python Programming")
+
+c.add_student(student1)
+c.add_student(student2)
+
+c.showAll()
+
+# This shows how __init__ is used for object initialization, nesting, and organization.
