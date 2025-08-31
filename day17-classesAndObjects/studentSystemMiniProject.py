@@ -7,3 +7,13 @@ class Student:
     
   def display(self):
     print(f"Name: {self.name}, Roll: {self.roll}, Age:  {self.age}")
+    
+class Classroom:
+  def __init__(self, course_name):
+    self.course_name = course_name
+    self.students = []
+    
+  def add_student(self, student):
+    self.students.append(student)
+  
+  
