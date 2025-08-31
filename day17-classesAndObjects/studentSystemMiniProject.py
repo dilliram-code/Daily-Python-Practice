@@ -16,4 +16,8 @@ class Classroom:
   def add_student(self, student):
     self.students.append(student)
   
-  
+  def showAll(self):
+    print(f"Class: {self.course_name}")
+    for s in self.students:
+      s.display()
+
