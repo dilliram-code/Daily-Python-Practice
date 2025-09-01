@@ -31,3 +31,4 @@ finally:
 - `__enter__(self)` → Called at the start of the block. (Setup / acquire resource)
 
 - `__exit__(self, exc_type, exc_val, exc_tb)` → Called at the end of the block. (Cleanup / release resource)
+
