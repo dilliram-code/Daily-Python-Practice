@@ -46,3 +46,11 @@ Output (a JSON string):
 ```python
 {"name": "Alice", "age": 25, "is_student": false, "skills": ["Python", "Machine Learning"]}
 ```
+**JSON string → Python dict**
+```python
+json_data = '{"name": "Bob", "age": 30, "skills": ["C++", "Data Science"]}'
+person = json.loads(json_data)
+
+print(person["name"])  # Bob
+print(person["skills"][1])  # Data Science
+```
