@@ -16,3 +16,14 @@ Example JSON:
   "address": { "city": "Kathmandu", "country": "Nepal" }
 }
 ```
+**2. JSON in Python**
+- Python has a built-in module called json.
+```python
+import json
+```
+This module provides:
+
+- `json.dumps()` → Convert Python → JSON string
+- `json.loads()` → Convert JSON string → Python object
+- `json.dump()` → Write JSON to a file
+- `json.load()` → Read JSON from a file
