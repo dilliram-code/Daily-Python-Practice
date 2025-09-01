@@ -27,3 +27,22 @@ This module provides:
 - `json.loads()` → Convert JSON string → Python object
 - `json.dump()` → Write JSON to a file
 - `json.load()` → Read JSON from a file
+
+**Python dict → JSON string**
+```python
+import json
+
+person = {
+    "name": "Alice",
+    "age": 25,
+    "is_student": False,
+    "skills": ["Python", "Machine Learning"],
+}
+
+json_string = json.dumps(person)
+print(json_string)
+```
+Output (a JSON string):
+```python
+{"name": "Alice", "age": 25, "is_student": false, "skills": ["Python", "Machine Learning"]}
+```
