@@ -1,5 +1,5 @@
 # To Do Manager with JSON
-
+import json
 
 # Data structure
 todos = [
@@ -12,3 +12,12 @@ todos = [
 def save_todos(todos, filename="todos.json"):
     with open(filename, "w") as f:
         json.dump(todos, f, indent=4)
+
+
+# Load tasks from JSON file
+def load_todos(filename="todos.json"):
+    try:
+        with open(filename, "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return []
