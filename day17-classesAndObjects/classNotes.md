@@ -51,3 +51,30 @@ Syntax:
 def __new__(cls, *args, **kwargs):
     # create and return new instance
 ```
+
+Role of `__init__`
+
+- `__init__` is an initializer (not a constructor in strict sense).
+
+- It initializes the instance returned by `__new__`.
+
+- It does not return anything (must return None).
+
+Syntax:
+```python
+def __init__(self, *args, **kwargs):
+    # initialize attributes
+```
+**The Flow**
+
+When you do:
+```python
+obj = MyClass(10)
+```
+Internally:
+
+- `MyClass.__new__(MyClass, 10)` → creates instance.
+
+- The new instance is passed to `MyClass.__init__(obj, 10)` → initializes attributes.
+
+Finally, `obj` is returned.
