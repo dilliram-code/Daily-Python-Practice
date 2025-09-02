@@ -30,3 +30,14 @@ def add_task(task):
     new_id = len(todos) + 1
     todos.append({"id": new_id, "task": task, "done": False})
     save_todos(todos)
+
+
+# mark to do as done
+def mark_done(task_id):
+    todos = load_todos()
+    for todo in todos:
+        if todo["id"] == task_id:
+            todo["done"] = True
+    save_todos(todos)
+
+
