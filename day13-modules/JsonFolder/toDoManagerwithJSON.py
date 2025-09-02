@@ -41,3 +41,16 @@ def mark_done(task_id):
     save_todos(todos)
 
 
+# show all tasks
+def show_tasks():
+    todos = load_todos()
+    for t in todos:
+        status = "✓" if t["done"] else "✗"
+        print(f"{t['id']}. {t['task']} [{status}]")
+
+
+# run the tasks
+add_task("Study Python JSON")
+add_task("Complete project")
+mark_done(1)
+show_tasks()
