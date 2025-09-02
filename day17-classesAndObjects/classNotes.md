@@ -35,3 +35,19 @@ print(c.count)        # 12
 - It’s often referred to as the constructor of the class (though technically in Python, object creation happens in `__new__`, but `__init__` initializes it).
 
 - 👉 Think of `__init__` as the setup function that prepares an object with initial values.
+
+**4. `__new__` vs `__init__` in Python**
+
+Role of `__new__`
+
+- `__new__` is a class method (technically a static method defined on the class) responsible for creating a new instance of a class.
+
+- It is called before `__init__`.
+
+- It always returns a new instance of the class (or another object).
+
+Syntax:
+```python
+def __new__(cls, *args, **kwargs):
+    # create and return new instance
+```
