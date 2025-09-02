@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "task": "Study Python JSON",
+        "done": true
+    },
+    {
+        "id": 2,
+        "task": "Complete project",
+        "done": false
+    },
+    {
+        "id": 3,
+        "task": "Study Python JSON",
+        "done": false
+    },
+    {
+        "id": 4,
+        "task": "Complete project",
+        "done": false
+    },
+    {
+        "id": 5,
+        "task": "Study Python JSON",
+        "done": false
+    },
+    {
+        "id": 6,
+        "task": "Complete project",
+        "done": false
+    },
+    {
+        "id": 7,
+        "task": "Study Python JSON",
+        "done": false
+    },
+    {
+        "id": 8,
+        "task": "Complete project",
+        "done": false
+    }
+]
