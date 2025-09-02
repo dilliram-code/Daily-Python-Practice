@@ -78,3 +78,25 @@ Internally:
 - The new instance is passed to `MyClass.__init__(obj, 10)` → initializes attributes.
 
 Finally, `obj` is returned.
+
+**Basic Example**
+```python
+class MyClass:
+    def __new__(cls, *args, **kwargs):
+        print("Inside __new__ (creating instance)")
+        instance = super().__new__(cls)  # actually create object
+        return instance
+
+    def __init__(self, value):
+        print("Inside __init__ (initializing instance)")
+        self.value = value
+
+obj = MyClass(5)
+print(obj.value)
+```
+output:
+```python
+Inside __new__ (creating instance)
+Inside __init__ (initializing instance)
+5
+```
