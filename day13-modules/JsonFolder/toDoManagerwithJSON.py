@@ -21,3 +21,12 @@ def load_todos(filename="todos.json"):
             return json.load(f)
     except FileNotFoundError:
         return []
+
+
+
+# Add new to do
+def add_task(task):
+    todos = load_todos()
+    new_id = len(todos) + 1
+    todos.append({"id": new_id, "task": task, "done": False})
+    save_todos(todos)
