@@ -254,3 +254,6 @@ print(list(gen))  # [9, 16, 25] -> continues from where it left
 ```
 - With yield, the function pauses at each value, remembers where it was, and continues next time.
 
+## 🟢 What is __repr__ in Python? (deep dive)
+
+- `__repr__` is a special method that returns the official string representation of an object. It’s what you see in the REPL, in debug logs, and when you call `repr(obj)` or format with `!r`. Its goal is to be unambiguous and, when reasonably possible, look like valid Python code that could recreate the object.
