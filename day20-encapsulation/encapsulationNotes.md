@@ -15,3 +15,11 @@
 - Protected members: One underscore `_var` → internal use only (but still accessible).
 
 - Private members: Double underscore `__var` → name-mangled (harder to access from outside).
+
+**What is a Static Method?**
+
+- A static method is a method that belongs to a class but does not depend on instance (self) or class (cls).
+
+- Defined using the @staticmethod decorator.
+
+- Used for utility/helper functions related to the class, but not tied to object or class state.
