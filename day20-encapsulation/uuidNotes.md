@@ -21,3 +21,10 @@ Python’s uuid module supports 5 variants:
 - `UUID5` – based on SHA-1 hashing (name-based)
 
 - `UUID objects` – represents UUIDs with methods.
+
+`Best Practices:`
+
+- ✅ Use `uuid4()` for random unique IDs (most common).
+- ✅ Use `uuid1()` when you want time-based ordering (but it leaks MAC/time info).
+- ✅ Use `uuid3()` or `uuid5()` for consistent deterministic IDs.
+- ❌ Don’t use UUID as a replacement for cryptographic randomness — it’s unique, but not always secure.
