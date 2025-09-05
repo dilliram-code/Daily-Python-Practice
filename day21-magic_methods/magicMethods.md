@@ -1,0 +1,2 @@
+**Magic Methods (Dunder Methods)**
+- Magic methods (aka dunder methods) are special methods whose names start and end with double underscores, e.g. `__init__`, `__repr__`, `__add__`. Python calls them implicitly to implement language features (construction, arithmetic, iteration, attribute access, etc.). Implementing them lets your objects behave like `built-in` types.
