@@ -19,4 +19,12 @@ class BankAccount:
       return True
     return False
   
+  def withdraw(self, amount):
+    if 0<amount<=self.__balance:
+      self.__balance -= amount
+      return True
+    return False
   
+  @staticmethod
+  def validate_account_number(account_number):
+    return  len(str(account_number)) == 10 and str(account_number).isdigit()
