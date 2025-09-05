@@ -23,3 +23,11 @@
 - Defined using the @staticmethod decorator.
 
 - Used for utility/helper functions related to the class, but not tied to object or class state.
+
+**When to Use @staticmethod?**
+
+- Utility methods (e.g., date formatting, math operations).
+
+- Functions logically grouped with a class but not needing object/class state.
+
+- Keep code organized.
