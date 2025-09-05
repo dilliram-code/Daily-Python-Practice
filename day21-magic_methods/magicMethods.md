@@ -55,3 +55,13 @@ Other
 - `__copy__` / `__deepcopy__` or implement via copy protocol
 
 - `__getstate__` / `__setstate__` (pickling hooks)
+
+**How Python looks up magic methods (important detail)**
+
+- For many operations (like x + y) Python looks up special methods on the type (class), not the instance `x.__dict__`. That’s why adding `__add__` to an instance won't change behavior of `+`; you must define it on the class.
+
+- Example: int.`__add__` is used for `1 + 2`.
+
+`Implementation note:`
+
+ If you implement `__add__` on a class, Python will call it for a + b. If it returns NotImplemented, Python will try the reflected method (`__radd__` on b) or give `TypeError`.
