@@ -28,3 +28,28 @@ class BankAccount:
   @staticmethod
   def validate_account_number(account_number):
     return  len(str(account_number)) == 10 and str(account_number).isdigit()
+  
+  
+# create an object
+account_holder1 = BankAccount("Shree", 0)
+
+
+# check initial balance
+print("Initial balance:", account_holder1.balance)
+
+# deposite some amount
+account_holder1.deposit(3000)
+
+# check after deposit
+print("Balance now:", account_holder1.balance)
+
+
+account_holder1.withdraw(300)
+# check after withdrawl
+print("Balance after withdrawl:", account_holder1.balance)
+
+# check account validation
+print(BankAccount.validate_account_number("1234567890"))
+
+# false input
+print(BankAccount.validate_account_number("abc"))
