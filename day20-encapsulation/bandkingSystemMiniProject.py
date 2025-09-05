@@ -8,3 +8,15 @@ class BankAccount:
     self.__account_holder = account_holder      # private
     self.__balance = balance                    # private
     
+  
+  @property
+  def balance(self):
+    return self.__balance
+  
+  def deposit(self, amount):
+    if amount > 0:
+      self.__balance = amount
+      return True
+    return False
+  
+  
