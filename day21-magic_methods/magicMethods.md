@@ -95,3 +95,19 @@ Person(name='Alice', age=25)
 - `Goal`: Give a readable / pretty string representation of the object.
 - Usually for users (printing, display).
 - Should be more friendly than `__repr__`.
+```python
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __repr__(self):
+        return f"Person(name='{self.name}', age={self.age})"
+
+    def __str__(self):
+        return f"{self.name}, {self.age} years old"
+
+p = Person("Alice", 25)
+print(p)         # str()
+print(repr(p))   # repr()
+```
