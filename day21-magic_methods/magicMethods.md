@@ -73,3 +73,16 @@ Other
 - Usually for developers (debugging, logging).
 
 - Should ideally look like valid Python code that could recreate the object.
+
+```python
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __repr__(self):
+        return f"Person(name='{self.name}', age={self.age})"
+
+p = Person("Alice", 25)
+print(repr(p))
+```
