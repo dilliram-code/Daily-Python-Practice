@@ -86,3 +86,7 @@ class Person:
 p = Person("Alice", 25)
 print(repr(p))
 ```
+output:
+```python
+Person(name='Alice', age=25)
+```
