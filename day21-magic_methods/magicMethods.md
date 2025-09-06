@@ -65,3 +65,11 @@ Other
 `Implementation note:`
 
  If you implement `__add__` on a class, Python will call it for a + b. If it returns NotImplemented, Python will try the reflected method (`__radd__` on b) or give `TypeError`.
+
+**What is __repr__?**
+
+- `Goal`: Give an unambiguous string representation of the object.
+
+- Usually for developers (debugging, logging).
+
+- Should ideally look like valid Python code that could recreate the object.
