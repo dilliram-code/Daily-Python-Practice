@@ -90,3 +90,8 @@ output:
 ```python
 Person(name='Alice', age=25)
 ```
+**What is __str__?**
+
+- `Goal`: Give a readable / pretty string representation of the object.
+- Usually for users (printing, display).
+- Should be more friendly than `__repr__`.
