@@ -111,3 +111,8 @@ p = Person("Alice", 25)
 print(p)         # str()
 print(repr(p))   # repr()
 ```
+output:
+```python
+Alice, 25 years old
+Person(name='Alice', age=25)
+```
