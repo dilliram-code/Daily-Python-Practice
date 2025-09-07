@@ -116,3 +116,12 @@ output:
 Alice, 25 years old
 Person(name='Alice', age=25)
 ```
+Best Practices
+
+- Always implement `__repr__` for debugging/logging.
+
+- Implement `__str__` if you want a nice display for users.
+
+- If you only implement `__repr__`, str() will fall back to it.
+
+- Use !r in f-strings inside  `__repr__` to call repr() of sub-objects.
