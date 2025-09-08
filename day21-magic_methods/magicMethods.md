@@ -58,7 +58,7 @@ Other
 
 **How Python looks up magic methods (important detail)**
 
-- For many operations (like x + y) Python looks up special methods on the type (class), not the instance `x.__dict__`. That’s why adding `__add__` to an instance won't change behavior of `+`; you must define it on the class.
+- For many operations (like `x + y`) Python looks up special methods on the `type (class)`, not the instance `x.__dict__`. That’s why adding `__add__` to an instance won't change behavior of `+`; you must define it on the class.
 
 - Example: int.`__add__` is used for `1 + 2`.
 
@@ -124,4 +124,4 @@ Best Practices
 
 - If you only implement `__repr__`, str() will fall back to it.
 
-- Use !r in f-strings inside  `__repr__` to call repr() of sub-objects.
+- Use `!r` in f-strings inside  `__repr__` to call repr() of sub-objects.
