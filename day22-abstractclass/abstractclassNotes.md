@@ -11,3 +11,9 @@
 - To enforce a common interface across multiple subclasses.
 - To ensure that certain methods must be implemented by all subclasses.
 - To provide common behavior in one place, reducing code duplication.
+
+**`abc` Module in Python**
+
+- Python provides the `abc` module to define abstract classes and methods:
+- `ABC`: Base class to define an abstract class.
+- `@abstractmethod`: Decorator to declare a method as abstract.
