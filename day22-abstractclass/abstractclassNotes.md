@@ -17,3 +17,43 @@
 - Python provides the `abc` module to define abstract classes and methods:
 - `ABC`: Base class to define an abstract class.
 - `@abstractmethod`: Decorator to declare a method as abstract.
+
+```python
+from abc import ABC, abstractmethod
+```
+**Basic Example**
+```python
+from abc import ABC, abstractmethod
+
+# Abstract class
+class Shape(ABC):
+    
+    @abstractmethod
+    def area(self):
+        pass  # No implementation
+    
+    @abstractmethod
+    def perimeter(self):
+        pass
+
+# Cannot create object of abstract class
+# s = Shape()  # ❌ This will raise TypeError
+
+# Subclass implementing abstract methods
+class Rectangle(Shape):
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+    
+    def area(self):
+        return self.width * self.height
+    
+    def perimeter(self):
+        return 2 * (self.width + self.height)
+
+# Using the subclass
+r = Rectangle(5, 10)
+print("Area:", r.area())          # Area: 50
+print("Perimeter:", r.perimeter())  # Perimeter: 30
+
+```
