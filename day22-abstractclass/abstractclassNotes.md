@@ -63,4 +63,28 @@ print("Perimeter:", r.perimeter())  # Perimeter: 30
 
 - Rectangle implements all abstract methods → can instantiate.
 
-- If a subclass does not implement all abstract methods, it also becomes abstract.
+- If a subclass does not implement all abstract methods, it also becomes abstract.**
+
+**Concrete + Abstract Methods Together**
+`Abstract classes can have normal methods too.`
+```python
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+    
+    @abstractmethod
+    def fuel_type(self):
+        pass
+    
+    def start_engine(self):
+        print("Engine started...")
+
+class Car(Vehicle):
+    def fuel_type(self):
+        return "Petrol"
+
+c = Car()
+c.start_engine()          # Engine started...
+print(c.fuel_type())       # Petrol
+```
+`✅ Notice`: start_engine is already implemented, so subclasses inherit it.
