@@ -57,3 +57,10 @@ print("Area:", r.area())          # Area: 50
 print("Perimeter:", r.perimeter())  # Perimeter: 30
 
 ```
+✅ Key Points:
+
+- Shape is abstract → cannot instantiate.
+
+- Rectangle implements all abstract methods → can instantiate.
+
+- If a subclass does not implement all abstract methods, it also becomes abstract.
