@@ -88,3 +88,33 @@ c.start_engine()          # Engine started...
 print(c.fuel_type())       # Petrol
 ```
 `✅ Notice`: start_engine is already implemented, so subclasses inherit it.
+
+`The main purpose`: of an abstract method in Python (and other object-oriented languages) is to define a method that must be implemented by any subclass, without providing its implementation in the parent class.
+
+`1. Enforce a Contract`
+
+Abstract methods act like a contract: any class inheriting from an abstract base class must provide its own version of the method.
+
+This ensures a consistent interface across different subclasses.
+
+```python
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+    @abstractmethod
+    def start_engine(self):
+        pass  # No implementation here
+
+class Car(Vehicle):
+    def start_engine(self):
+        print("Car engine started!")
+
+class Bike(Vehicle):
+    def start_engine(self):
+        print("Bike engine started!")
+```
+Here:
+
+- Vehicle defines the abstract method start_engine.
+
+- Car and Bike must implement start_engine, otherwise Python will raise an error.
