@@ -130,3 +130,20 @@ for v in vehicles:
 # Both can be called the same way
 ```
 - Even though  `Car` and `Bike` implement start_engine differently, you can treat them uniformly because the abstract method guarantees its existence.
+
+`3. Prevent Direct Instantiation`
+
+Abstract base classes with abstract methods cannot be instantiated directly.
+
+This ensures that the class is meant only to provide a blueprint, not a concrete object.
+```python
+v = Vehicle()  # ❌ This will raise an error
+```
+`✅ Summary`
+The main purpose of an abstract method is to:
+
+- Force subclasses to implement certain methods (enforce a contract).
+
+- Provide a consistent interface for polymorphism.
+
+- Prevent instantiation of incomplete base classes.
