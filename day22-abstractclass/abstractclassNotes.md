@@ -118,3 +118,15 @@ Here:
 - Vehicle defines the abstract method start_engine.
 
 - Car and Bike must implement start_engine, otherwise Python will raise an error.
+
+`2. Promote Polymorphism`
+
+Abstract methods allow different subclasses to be used interchangeably while ensuring they all provide the required behavior.
+
+```python
+vehicles = [Car(), Bike()]
+for v in vehicles:
+    v.start_engine()  
+# Both can be called the same way
+```
+- Even though  `Car` and `Bike` implement start_engine differently, you can treat them uniformly because the abstract method guarantees its existence.
