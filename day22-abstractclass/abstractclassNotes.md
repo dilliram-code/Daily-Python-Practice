@@ -14,9 +14,11 @@
 
 **`abc` Module in Python**
 
-- Python provides the `abc` module to define abstract classes and methods:
+- Python provides the `abc` module to define abstract classes and methods.
 - `ABC`: Base class to define an abstract class.
 - `@abstractmethod`: Decorator to declare a method as abstract.
+
+**Import abstract class**
 
 ```python
 from abc import ABC, abstractmethod
