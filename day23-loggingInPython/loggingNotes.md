@@ -70,3 +70,39 @@ logging.warning("This is a warning")
 logging.error("An error occurred")
 logging.critical("Critical issue")
 ```
+Format codes:
+
+- `%(asctime)s` → Time of log.
+
+- `%(levelname)s` → Level (INFO, ERROR, etc).
+
+- `%(message)s` → Actual message.
+
+- `%(filename)s` → File name.
+
+- `%(lineno)d` → Line number.
+
+⚡ Example Output:
+
+```python
+2025-09-12 18:32:21,123 - INFO - Some useful information
+```
+**🔹 5. Logging to a File**
+
+Instead of console, log messages can be saved in a file.
+
+```python
+import logging
+
+logging.basicConfig(
+    filename="app.log",
+    filemode="w",  # overwrite file each run (use "a" for append)
+    level=logging.DEBUG,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
+logging.info("Program started")
+logging.warning("Something might be wrong")
+logging.error("An error occurred")
+```
+`⚡ This creates a file app.log with logs inside.`
