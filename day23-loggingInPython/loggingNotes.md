@@ -10,8 +10,8 @@ Logging is a way to record messages from your program while it runs.
 - Keeping history of program execution.
 - Instead of using `print()`, Python’s `logging` module is more powerful, flexible, and professional.
 
-**BASIC LOGGING EXAMPLE**
-```python
+**🔹2. BASIC LOGGING EXAMPLE**
+```pytho
 import logging
 
 # Basic configuration
@@ -38,3 +38,18 @@ logging.critical("This is a critical message")
 `NOTE:`
 
 ⚡ Output will show only `WARNING`, `ERROR`, and `CRITICAL` by default unless you set `level=logging.DEBUG.`
+
+**🔹 3. Logging Levels (in order of severity)**
+
+- DEBUG → 10
+
+- INFO → 20
+
+- WARNING → 30
+
+- ERROR → 40
+
+- CRITICAL → 50
+
+- The level you set decides which messages appear.
+- `Example`: if you set logging.basicConfig(level=logging.INFO), then DEBUG messages will not show.
