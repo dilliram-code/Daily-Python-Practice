@@ -52,4 +52,21 @@ logging.critical("This is a critical message")
 - CRITICAL → 50
 
 - The level you set decides which messages appear.
-- `Example`: if you set logging.basicConfig(level=logging.INFO), then DEBUG messages will not show.
+- `Example`: if you set `logging.basicConfig(level=logging.INFO)`, then `DEBUG` messages will not show.
+
+**🔹 4. Formatting Log Messages**
+
+```python
+import logging
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
+logging.debug("Debugging details")
+logging.info("Some useful information")
+logging.warning("This is a warning")
+logging.error("An error occurred")
+logging.critical("Critical issue")
+```
