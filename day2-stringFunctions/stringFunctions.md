@@ -12,3 +12,17 @@ Q: `Why is ''.join(list_of_strings) preferred over repeated +=?`
 
 Q: `How to check if string s contains only digits?`
 - `s.isdigit()` (note locale/Unicode nuances), or `s.isnumeric()` depending on needs.
+
+**Intermediate**
+
+Q: `Difference between str.find() and str.index()?`
+-  `find()` returns `-1` if not found; `index()` raises `ValueError`.
+
+Q: `Explain str.format() vs f-strings.`
+- f-strings are evaluated at runtime and can include expressions; `format()` is older, useful when template is dynamic.
+
+Q: `How to handle Unicode normalization?`
+- Use unicodedata.normalize('NFC'|'NFD'|'NFKC'|'NFKD', s) before comparisons.
+
+Q: `How to perform safe templating for user content?`
+- Use string.Template or sanitized templates; do not evaluate user input with eval/format that may include code.
