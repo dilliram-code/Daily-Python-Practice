@@ -26,3 +26,20 @@ Q: `How to handle Unicode normalization?`
 
 Q: `How to perform safe templating for user content?`
 - Use string.Template or sanitized templates; do not evaluate user input with eval/format that may include code.
+
+**Advanced**
+
+Q: `What is a grapheme cluster and why does it matter?`
+- A user-perceived character may be multiple code points (base+combining marks). Operations like slicing by code points can split graphemes; use grapheme-aware libraries when needed.
+
+Q: `How to efficiently search many patterns in text?`
+- Compile regexes, use re.compile() once; for many fixed substrings consider Aho-Corasick algorithm (third-party libs).
+
+Q: `How do you prevent DoS via giant format strings or crafted input?`
+- Validate template size and placeholders; avoid formatting untrusted user templates with powerful features; use Template or whitelist format fields.
+
+Q: `Explain Python’s string interning.`
+- Small immutable strings may be interned to reuse memory and speed up comparisons; sys.intern() explicitly interns strings.
+
+Q: `How to handle text encoding issues when reading files from unknown sources?`
+- Try utf-8 with errors='replace' or detect encoding with chardet/charset-normalizer; normalize text afterward.
