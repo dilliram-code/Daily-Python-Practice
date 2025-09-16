@@ -257,3 +257,36 @@ print(list(gen))  # [9, 16, 25] -> continues from where it left
 ## 🟢 What is __repr__ in Python? (deep dive)
 
 - `__repr__` is a special method that returns the official string representation of an object. It’s what you see in the REPL, in debug logs, and when you call `repr(obj)` or format with `!r`. Its goal is to be unambiguous and, when reasonably possible, look like valid Python code that could recreate the object.
+
+
+# 🔹random.randint() vs random.randrange()
+
+`random.randint(a, b)`
+
+- Returns an integer between a and b inclusive.
+
+Example:
+```python
+import random
+print(random.randint(1, 6))  # 1,2,3,4,5,6 possible
+```
+`random.randrange(start, stop, step=1)`
+- Works like `range()`.
+- Returns a random number from the sequence start to stop-1.
+- stop is exclusive.
+- You can also control steps.
+
+Example:
+```python
+import random
+print(random.randrange(1, 6))     
+# 1,2,3,4,5 possible (6 not included)
+
+print(random.randrange(0, 10, 2)) 
+# 0,2,4,6,8 possible
+```
+`👉 Key difference:`
+
+- `randint(a, b)` → both ends included.
+
+- `randrange(start, stop)` → stop not included, behaves like range().
