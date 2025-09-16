@@ -8,4 +8,4 @@ qr.add_data("I am Dilli Ram Chaudhary.")
 qr.make(fit=True)
 
 img = qr.make_image(fill_color='black', back_color='white')
-img.save("advanced.png")
+img.save("advanced1.png")
