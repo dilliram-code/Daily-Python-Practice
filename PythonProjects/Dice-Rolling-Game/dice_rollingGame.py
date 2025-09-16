@@ -19,4 +19,5 @@ while True:
 '''
 - Modify the program so the user can specify how many dice they want to roll
 - Add a feature that keeps track of how many times the user has rolled the dice during session.
+- This requires a counter that increments each time the dice is rolled.
 '''
