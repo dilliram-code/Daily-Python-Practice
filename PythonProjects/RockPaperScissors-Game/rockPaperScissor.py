@@ -13,6 +13,10 @@ computer_choice = random.choice(choices)
 
 while True:
   user_choice = input("Enter your choice (r/p/s): ").lower()
+  if user_choice not in choices:
+    print("Invalid choice!")
+    continue
+  
   print(f"Your chose {emojis[user_choice]}")
   print(f"Computer choice: {emojis[computer_choice]}")
 
