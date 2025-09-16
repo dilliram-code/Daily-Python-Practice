@@ -290,3 +290,7 @@ print(random.randrange(0, 10, 2))
 - `randint(a, b)` → both ends included.
 
 - `randrange(start, stop)` → stop not included, behaves like range().
+
+`Note`:
+- Both `randint()` and `randrange()` cannot produce
+float value number
