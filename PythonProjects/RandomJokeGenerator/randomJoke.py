@@ -10,3 +10,13 @@ punchline = joke['punchline'] # fetch the punch line using key
 
 print(setup)
 print(punchline)
+
+
+'''✨ Extensions you can try:
+
+- Fetch 10 random jokes instead of 1 → use https: // official-joke-api.appspot.com/random_ten.
+
+- Allow user to choose a category(general, programming, knock-knock).
+
+- Save jokes to a file(jokes.txt).
+'''
