@@ -7,7 +7,7 @@ def show_menu():
     print("2. View Tasks")
     print("3. Remove Task")
     print("4. Exit")
- 
+
 
 while True:
     show_menu()
@@ -17,3 +17,25 @@ while True:
         task = input("Enter task.")
         tasks.append(task)
         print("Task added!")
+
+    elif choice == "2":
+        if not tasks:
+            print("No task yet!")
+        else:
+            for i, t in enumerate(tasks, 1):
+                print(f"{i}.{t}")
+
+    elif choice == "3":
+        num = int(input("Enter the number to remove:"))
+        if 0 < num <= len(tasks):
+            removed = tasks.pop(num - 1)
+            print(f"Removed: {removed}")
+        else:
+            print("Invalid task number")
+            
+    elif choice == "4":
+        print("Bye!")
+        break
+    
+    else:
+        print("Invalid choice, try again!")
