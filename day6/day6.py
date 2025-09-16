@@ -22,12 +22,7 @@ print(num3)
 result = random.randrange(0, 100, 5)
 print(result)
 
-''' NOTE: The first and the last number are exclusive
-first_number: It represents the starting
-middle one: represents the end of the range
-last one: represents the step that would be used
-
-# NOTE: Both randint() and randrange() cannot produce
+''' NOTE: Both randint() and randrange() cannot produce
 float value number
 '''
 
