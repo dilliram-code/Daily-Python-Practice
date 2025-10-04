@@ -6,10 +6,10 @@ class Police:
         self.level = level
 
     def chase(self):
-        print("Police chases to the theif.")
+        print("Police chases to the thief.")
 
 
-class Theif(Police):
+class Thief(Police):
     def __init__(self, name, height, color):
         self.name = name
         self.height = height
@@ -22,6 +22,6 @@ class Theif(Police):
 police1 = Police("Ramesh", "Baniyatar", "Sipahi")
 police1.chase()
 
-police2 = Theif("Mahes", 5.5, "Blode")
+police2 = Thief("Mahesh", 5.5, "Blonde")
 police2.chase()
 police2.run()
