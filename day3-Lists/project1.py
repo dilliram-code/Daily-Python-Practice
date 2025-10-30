@@ -18,7 +18,7 @@ def add_students():
   students.append([name, marks])
   print(f"{name} added successfully!")
 
-add_students()
+# add_students()
 
 def view_students():
   if not students:
@@ -29,7 +29,7 @@ def view_students():
     print(f"{i}.Name: {name}, Marks: {marks}")
   print()
 
-view_students()
+# view_students()
 
 def update_students():
   name = input("Enter the name of student: ").strip()
@@ -41,7 +41,7 @@ def update_students():
       return
   print("Student not found!")
 
-update_students()
+# update_students()
 
 def delete_students():
   name = input("Enter student's name: ").strip()
@@ -64,7 +64,7 @@ def search_student():
   if not found:
     print("Student not found!\n")
 
-search_student()
+# search_student()
 
 def show_statistics():
   if not students:
@@ -80,8 +80,41 @@ def show_statistics():
   print(f"The highest marks: {highest}")
   print(f"The lowest marks: {lowest}\n")
 
-show_statistics()
+# show_statistics()
 
+# main Menu loop
+def main():
+  while True:
+    print("\n=============Student Management System==========")
+    print("""
+          1. Add student
+          2. View student
+          3. Update student
+          4. Delete student
+          5. Search student
+          6. Show statistics
+          7. Exit
+          """)
+    choice = int(input("Enter your choice (1-7): "))
 
+    if choice == 1:
+      add_students()
+    elif choice == 2:
+      view_students()
+    elif choice == 3: 
+      update_students()
+    elif choice == 4:
+      delete_students()
+    elif choice == 5:
+      search_student()
+    elif choice == 6:
+      show_statistics()
+    elif choice == 7:
+      print("Exiting the program? Good bye!")
+      break
+    else:
+      print("Invalid inpu, please try again!")
 
-
+# call the main function:
+if __name__ == '__main__':
+  main()
