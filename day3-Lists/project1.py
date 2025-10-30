@@ -30,3 +30,15 @@ def view_students():
     print(f"{i}.Name: {name}, Marks: {marks}")
   print()
 # view_students()
+
+
+def update_students():
+  name = input("Enter the name of student: ").strip()
+  for student in students:
+    if student[0].lower() == name.lower():
+      new_marks = float(input("Enter new marks: "))
+      student[1] = new_marks
+      print(f"{name}'s marks updated.\n")
+      return
+  print("Student not found!")
+
