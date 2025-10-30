@@ -66,5 +66,22 @@ def search_student():
 
 search_student()
 
+def show_statistics():
+  if not students:
+    print("No students to analyse.\n")
+    return
+  marks = [m for _, m in students]    # stores marks only skipping names
+  avg = sum(marks)/len(marks)
+  highest = max(marks)
+  lowest = min(marks)
+
+  print("\n----------Student statistics-------")
+  print(f"The average marks: {avg}")
+  print(f"The highest marks: {highest}")
+  print(f"The lowest marks: {lowest}\n")
+
+show_statistics()
+
+
 
 
