@@ -52,7 +52,19 @@ def delete_students():
       return
   print("Student not found!")
 
-delete_students()
+# delete_students()
+
+def search_student():
+  name = input("Enter name of student: ").strip()
+  found = False
+  for student in students:
+    if name.lower() in student[0].lower():
+      print(f"Found: {student[0]} - {student[1]}")
+      found = True
+  if not found:
+    print("Student not found!\n")
+
+search_student()
 
 
 
