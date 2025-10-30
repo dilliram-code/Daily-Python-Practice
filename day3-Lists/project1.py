@@ -18,9 +18,8 @@ def add_students():
   students.append([name, marks])
   print(f"{name} added successfully!")
 
+add_students()
 
-# add_students()
-# print(students)
 def view_students():
   if not students:
     print("No students available.\n")
@@ -29,8 +28,8 @@ def view_students():
   for i,(name, marks) in enumerate(students, start=1):
     print(f"{i}.Name: {name}, Marks: {marks}")
   print()
-# view_students()
 
+view_students()
 
 def update_students():
   name = input("Enter the name of student: ").strip()
@@ -41,4 +40,19 @@ def update_students():
       print(f"{name}'s marks updated.\n")
       return
   print("Student not found!")
+
+update_students()
+
+def delete_students():
+  name = input("Enter student's name: ").strip()
+  for student in students:
+    if student[0].lower() == name.lower():
+      students.remove(student)
+      print(f"{name} deleted successfully!")
+      return
+  print("Student not found!")
+
+delete_students()
+
+
 
