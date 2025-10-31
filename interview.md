@@ -294,3 +294,15 @@ print(random.randrange(0, 10, 2))
 `Note`:
 - Both `randint()` and `randrange()` cannot produce
 float value number
+
+#### What is “hashing”?
+
+- Hashing means converting data into a fixed-size number (called a hash value or hash code) using a hash function.
+```python
+hash("apple")  # This gives a unique number
+```
+```python
+# Output might be something like:
+-1744855947583531823
+```
+- This number represents the value "apple" in a shorter, fixed form — that’s hashing.
