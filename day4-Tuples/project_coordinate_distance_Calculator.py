@@ -24,3 +24,6 @@ for city in cities:
 city1 = input("enter the first city: ").title().strip()
 city2 = input("enter the second city: ").title().strip()
 
+# pass the city co-ordinates to the function and store the result in var: distance
+distance = calculate_distance(cities[city1], cities[city2])
+print(f"The distance between {city1} and {city2} is: {distance:.2f} units.")
