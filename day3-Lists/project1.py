@@ -76,7 +76,7 @@ def show_statistics():
   lowest = min(marks)
 
   print("\n----------Student statistics-------")
-  print(f"The average marks: {avg}")
+  print(f"The average marks: {avg:.2f}")
   print(f"The highest marks: {highest}")
   print(f"The lowest marks: {lowest}\n")
 
