@@ -25,5 +25,8 @@ city1 = input("enter the first city: ").title().strip()
 city2 = input("enter the second city: ").title().strip()
 
 # pass the city co-ordinates to the function and store the result in var: distance
-distance = calculate_distance(cities[city1], cities[city2])
-print(f"The distance between {city1} and {city2} is: {distance:.2f} units.")
+if city1 in cities and city2 in cities:
+  distance = calculate_distance(cities[city1], cities[city2])
+  print(f"The distance between {city1} and {city2} is: {distance:.2f} units.")
+else:
+  print("One or both city names are not valid ❎. Please check the spelling!")
