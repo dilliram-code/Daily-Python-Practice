@@ -306,3 +306,13 @@ hash("apple")  # This gives a unique number
 -1744855947583531823
 ```
 - This number represents the value "apple" in a shorter, fixed form — that’s hashing.
+
+
+#### Why do we use hashing?
+
+_Because it’s fast for searching and comparing values._
+_Python uses hashing internally in data structures like:_
+
+- `dict (dictionary)` → for fast key lookup
+
+- `set` → for checking if an item exists quickly
