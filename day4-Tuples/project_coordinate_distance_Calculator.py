@@ -16,4 +16,11 @@ def calculate_distance(city1_cord, city2_cord):
 
   return distance_result
 
+print("\nAvailable cities:")
+for city in cities:
+  print(f"-{city}")
+
+# store the city name to pass as keys of the dict
+city1 = input("enter the first city: ").title().strip()
+city2 = input("enter the second city: ").title().strip()
 
