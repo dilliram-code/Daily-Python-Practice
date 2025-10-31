@@ -316,3 +316,25 @@ _Python uses hashing internally in data structures like:_
 - `dict (dictionary)` → for fast key lookup
 
 - `set` → for checking if an item exists quickly
+```python
+my_dict = {"name": "Dilli"}
+```
+Python stores `"name"` as a key, and before doing that, it calculates:
+```python
+hash("name")
+```
+This hash number helps Python quickly find `"name"` later without scanning every element.
+
+#### What does “hashable” mean?
+
+An object is hashable if:
+
+- It has a hash value that does not change during its lifetime.
+
+- It can be compared to other objects (using ==).
+
+`👉 In Python terms:`
+
+- The object must have both `__hash__()` and `__eq__()` methods defined properly.
+
+- Its hash value must stay the same forever.
