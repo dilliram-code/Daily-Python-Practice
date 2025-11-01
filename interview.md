@@ -338,3 +338,15 @@ An object is hashable if:
 - The object must have both `__hash__()` and `__eq__()` methods defined properly.
 
 - Its hash value must stay the same forever.
+
+#### ❇️s What is a frozen set?
+- A frozenset in Python is an immutable version of a standard set. Like a regular set, it is an unordered collection of unique elements. However, once a frozenset is created, its elements cannot be added, removed, or modified. This immutability makes frozenset objects hashable. 
+
+**Key Characteristics:**
+- `Immutable`: Elements cannot be changed after creation.
+- `Unique Elements`: Stores only distinct elements.
+- `Unordered`: Elements have no defined order.
+- `Hashable`: Can be used in contexts requiring hashable objects (e.g., dictionary keys, elements of other sets).
+
+**Where to Use frozenset:**
+- `Dictionary Keys`: Since frozenset objects are hashable, they can be used as keys in dictionaries, which is not possible with mutable set objects.
