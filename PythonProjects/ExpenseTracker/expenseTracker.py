@@ -24,4 +24,12 @@ def view_contact(contacts: Dict[str, Contact]) -> None:
     return
   for name, info in sorted(contacts.items()):
     print(f"{name} - Phone: {info.get("phone", '')}, Email: {info.get("email", '')}")
-    
+
+def search_contact(contacts: Dict[str, Contact]) -> None:
+  name = input("Enter your name: ")
+  contact = contacts.get(name)
+  if contact:
+    print(f"{name} - Phone: {contact['phone']}, Email: {contact['email']}")
+  else: 
+    print("Not found!")
+
