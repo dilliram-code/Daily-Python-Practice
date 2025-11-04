@@ -1,0 +1,10 @@
+""" Contact Book — Beginner level 
+Run: python contact_book_basic.py """
+
+from typing import Dict
+
+Contact = Dict[str, str]                # {"phone": "...", "email": "..."}
+
+def add_contact(contacts: Dict[str, Contact]) -> None:
+  name = input("Enter you name: ").strip()
+  
