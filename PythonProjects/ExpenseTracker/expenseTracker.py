@@ -17,3 +17,10 @@ def add_contact(contacts: Dict[str, Contact]) -> None:
   email = input("Enter your email: ").strip()
   contacts[name] = {"Phone:",name, "Email:",email}
   print(f"Added {name}.")
+
+def view_contact(contacts: Dict[str, Contact]) -> None:
+  if not contacts:
+    print("No contacts found!")
+    return
+  for name, info in sorted(contacts.items()):
+    
