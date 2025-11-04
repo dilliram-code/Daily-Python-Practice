@@ -13,3 +13,7 @@ def add_contact(contacts: Dict[str, Contact]) -> None:
   if name in contacts:
     print("Contact already exists!")
     return
+  phone = input("Enter your phone: ").strip()
+  email = input("Enter your email: ").strip()
+  contacts[name] = {"Phone:",name, "Email:",email}
+  print(f"Added {name}.")
