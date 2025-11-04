@@ -7,4 +7,6 @@ Contact = Dict[str, str]                # {"phone": "...", "email": "..."}
 
 def add_contact(contacts: Dict[str, Contact]) -> None:
   name = input("Enter you name: ").strip()
-  
+  if not name:
+    print("Name cannot be empty!")
+    return
