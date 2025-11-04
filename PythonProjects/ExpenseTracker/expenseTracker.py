@@ -10,3 +10,6 @@ def add_contact(contacts: Dict[str, Contact]) -> None:
   if not name:
     print("Name cannot be empty!")
     return
+  if name in contacts:
+    print("Contact already exists!")
+    return
