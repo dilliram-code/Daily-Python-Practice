@@ -23,4 +23,5 @@ def view_contact(contacts: Dict[str, Contact]) -> None:
     print("No contacts found!")
     return
   for name, info in sorted(contacts.items()):
+    print(f"{name} - Phone: {info.get("phone", '')}, Email: {info.get("email", '')}")
     
