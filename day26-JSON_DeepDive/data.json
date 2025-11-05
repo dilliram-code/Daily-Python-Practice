@@ -1,24 +1,4 @@
 {
-  "contacts": [
-    {
-      "name": "Alice Johnson",
-      "phone": "9876543210",
-      "email": "alice@example.com"
-    },
-    {
-      "name": "Bob Carter",
-      "phone": "9812345678",
-      "email": "bob.carter@example.com"
-    },
-    {
-      "name": "Charlie Dev",
-      "phone": "9801122334",
-      "email": "charlie.dev@example.com"
-    },
-    {
-      "name": "Dina Kumari",
-      "phone": "9845566778",
-      "email": "dina.k@example.com"
-    }
-  ]
+  "name": "Dilli",
+  "age": 30
 }
