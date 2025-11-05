@@ -45,3 +45,11 @@ def update_contact(contacts: Dict[str, Contact]) -> None:
   if email:
     contacts[name]['email'] = email
   print("Contact updated!")
+def delete_contact(contacts: Dict[str, Contact]) -> None:
+  name = input("enter the name to delete: ").strip()
+  if name in contacts:
+    del contacts[name]
+    print("contact deleted!")
+  else:
+    print("contact not found!")
+    
