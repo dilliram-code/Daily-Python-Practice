@@ -15,7 +15,7 @@ def add_contact(contacts: Dict[str, Contact]) -> None:
     return
   phone = input("Enter your phone: ").strip()
   email = input("Enter your email: ").strip()
-  contacts[name] = {"Phone:",name, "Email:",email}
+  contacts[name] = {"Phone:",phone, "Email:",email}
   print(f"Added {name}.")
 
 def view_contact(contacts: Dict[str, Contact]) -> None:
@@ -33,3 +33,14 @@ def search_contact(contacts: Dict[str, Contact]) -> None:
   else: 
     print("Not found!")
 
+def update_contact(contacts: Dict[str, Contact]) -> None:
+  name = input("enter your name: ").strip()
+  if name not in contacts:
+    print("Contacts not found!")
+    return 
+  phone = input(f"New phone (leave blank to keep {contacts[name]['phone']}): ").strip()
+  email = input(f"New email (leave blank to keep {contacts[name]['email']}): ").strip()
+  if phone:
+    contacts[name]['phone'] = phone
+  if email:
+    contacts[name]['email'] = email
