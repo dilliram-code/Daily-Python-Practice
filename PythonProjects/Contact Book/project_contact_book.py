@@ -52,4 +52,14 @@ def delete_contact(contacts: Dict[str, Contact]) -> None:
     print("contact deleted!")
   else:
     print("contact not found!")
-    
+
+def menu() -> None:
+  contacts: Dict[str, Contact] = {}
+  options = {
+    "1": ("Add contact", add_contact),
+    "2": ("View contact", view_contact),
+    "3": ("Search contact", search_contact),
+    "4": ("Update contact", update_contact),
+    "5": ("Delete contact", delete_contact),
+    "0": ("Exit", None)
+  }
