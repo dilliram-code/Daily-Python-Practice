@@ -67,4 +67,12 @@ def menu() -> None:
   while True:
     for k, (desc, _) in options.items():
       print(f"{k}.{desc}")
-    
+    choice = input("Choose: ").strip()
+    if choice == "0":
+      print("goodbye!")
+      break
+    action = options.get(choice)
+    if action:
+      action[1](contacts)
+    else:
+      print("Invalid choice!")
