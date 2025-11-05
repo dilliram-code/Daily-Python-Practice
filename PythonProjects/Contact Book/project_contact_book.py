@@ -44,3 +44,4 @@ def update_contact(contacts: Dict[str, Contact]) -> None:
     contacts[name]['phone'] = phone
   if email:
     contacts[name]['email'] = email
+  print("Contact updated!")
