@@ -63,3 +63,8 @@ def menu() -> None:
     "5": ("Delete contact", delete_contact),
     "0": ("Exit", None)
   }
+
+  while True:
+    for k, (desc, _) in options.items():
+      print(f"{k}.{desc}")
+    
