@@ -29,7 +29,14 @@ def add_student():
   save_data(students)                     # injects students into FILE_NAME 
   print("✅ student added successfully!")
 
-
-
+# display all students
+def show_students():
+  if not students:
+    print("No students record found!")
+    return
+  print("\n------------Students' Record-----------")
+  for s in students:
+    print(f"Name: {s['name']}, Roll: {s['roll']}, Marks: {s['marks']}")
+  print()
 
 students = load_data()                # load_data() -> a json file (or a list)
