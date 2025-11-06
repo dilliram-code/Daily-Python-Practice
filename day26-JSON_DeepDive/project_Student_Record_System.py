@@ -21,7 +21,7 @@ def save_data(data):
 def add_student():
   name = input("enter your name: ").strip()
   roll = int(input("enter your roll: ").strip())
-  marks = float(input("enter your marks: ")).strip()
+  marks = float(input("enter your marks: ").strip())
 
   # a dict that stores above info
   student = {"name": name, "roll": roll, "marks": marks}
@@ -61,3 +61,5 @@ def menu():
       print("Invalid choice! Try again.")
 
 
+if __name__== "__main__":
+  menu()
