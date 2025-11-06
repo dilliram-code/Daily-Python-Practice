@@ -39,4 +39,25 @@ def show_students():
     print(f"Name: {s['name']}, Roll: {s['roll']}, Marks: {s['marks']}")
   print()
 
+
+# main_menu
 students = load_data()                # load_data() -> a json file (or a list)
+def menu():
+  while True:
+    print("""
+          1. Add student
+          2. Show students
+          3. Exist
+          """)  
+    choice = input("enter your choice: ").strip()
+    if choice == '1':
+      add_student()
+    elif choice == '2':
+      show_students()
+    elif choice == '3':
+      print("Goodbye!")
+      break
+    else:
+      print("Invalid choice! Try again.")
+
+
