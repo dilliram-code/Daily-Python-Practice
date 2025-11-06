@@ -11,3 +11,8 @@ def load_data():
     with open(FILE_NAME, 'r') as f:
       return json.load(f)
   return []                           # return empty list if file not found
+
+# save data to JSON file
+def save_data(data):
+  with open(FILE_NAME, 'w') as f:
+    json.dump(data, f, indent=2) 
