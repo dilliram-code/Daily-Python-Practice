@@ -10,9 +10,22 @@ class Book:
     self.author = author
     self.is_borrowed = False
     self.borrowed_by = None         # Name of borrower
-    self.borrowed_date = Optional[datetime.date] = None
+    self.borrowed_date: Optional[datetime.date] = None
   
   def __str__(self):
     status = f"Borrowed by {self.borrowed_by}" if self.is_borrowed else "Available"
     return f"[{self.book_id}] {self.title} by {self.author} - {status}" 
   
+class Library:
+  def __init__(self):
+    self.books: List[Book] = []
+    self.next_id = 1                # simple auto-incrementing id
+
+  def add_books(self, title: str, author:str):
+    book = Book(self.next_id, title, author)
+    self.books.append(book)
+    self.next_id += 1
+    print(f"Added book: {book}")
+
+lib = Library()
+lib.add_books("The alchemist", "Poulo Coelho")
