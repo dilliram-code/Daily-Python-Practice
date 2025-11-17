@@ -25,7 +25,13 @@ class Library:
     book = Book(self.next_id, title, author)
     self.books.append(book)
     self.next_id += 1
-    print(f"Added book: {book}")
+    print(f"Added book: {book}")  
+  
+  def find_book_by_id(self, book_id: int) -> Optional[Book]:
+        for b in self.books:
+            if b.book_id == book_id:
+                return b
+        return None
 
 lib = Library()
 lib.add_books("The alchemist", "Poulo Coelho")
