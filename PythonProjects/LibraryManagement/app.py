@@ -32,6 +32,13 @@ class Library:
             if b.book_id == book_id:
                 return b
         return None
+  
+  def list_books(self):
+        if not self.books:
+            print("No books in the library.")
+            return
+        for b in self.books:
+            print(b)
 
 lib = Library()
 lib.add_books("The alchemist", "Poulo Coelho")
