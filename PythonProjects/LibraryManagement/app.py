@@ -1,0 +1,18 @@
+'''------------------------Library Management Project-------------------'''
+
+from typing import List, Optional
+import datetime
+
+class Book:
+  def __init__(self, book_id: int, title: str, author: str):
+    self.book_id = book_id
+    self.title = title
+    self.author = author
+    self.is_borrowed = False
+    self.borrowed_by = None         # Name of borrower
+    self.borrowed_date = Optional[datetime.date] = None
+  
+  def __str__(self):
+    status = f"Borrowed by {self.borrowed_by}" if self.is_borrowed else "Available"
+    return f"[{self.book_id}] {self.title} by {self.author} - {status}" 
+  
