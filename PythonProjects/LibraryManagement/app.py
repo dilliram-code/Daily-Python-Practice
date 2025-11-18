@@ -51,6 +51,20 @@ class Library:
         book.borrowed_by = borrower_name
         book.borrow_date = datetime.date.today()
         print(f"{borrower_name} borrowed '{book.title}' on {book.borrow_date}")
+  
+  def return_book(self, book_id: int):
+        book = self.find_book_by_id(book_id)
+        if book is None:
+            print("Book not found.")
+            return
+        if not book.is_borrowed:
+            print("Book is not borrowed.")
+            return
+        # reset borrowing info
+        print(f"{book.borrowed_by} returned '{book.title}'")
+        book.is_borrowed = False
+        book.borrowed_by = None
+        book.borrow_date = None
 
 lib = Library()
 lib.add_books("The alchemist", "Poulo Coelho")
