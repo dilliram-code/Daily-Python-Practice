@@ -66,5 +66,11 @@ class Library:
         book.borrowed_by = None
         book.borrow_date = None
 
-lib = Library()
-lib.add_books("The alchemist", "Poulo Coelho")
+  def main():
+    lib = Library()
+
+    # Seed sample books
+    lib.add_book("The Alchemist", "Paulo Coelho")
+    lib.add_book("Atomic Habits", "James Clear")
+    lib.add_book("Introduction to Algorithms", "Cormen et al.")
+
