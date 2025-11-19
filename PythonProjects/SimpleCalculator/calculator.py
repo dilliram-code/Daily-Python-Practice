@@ -1,6 +1,7 @@
 '''------------------Simple Calculator Project--------------'''
 
 def main():
+  import math
   def addition(first, second):
     first = int(input("enter the first number: ").strip())
     second = int(input("enter the second number: ").strip())
@@ -24,4 +25,11 @@ def main():
     second = int(input("enter the second number: ").strip())
 
     return first/second
+  
+  def square_root(first):
+    first = int(input("enter the first number: ").strip())
+    if first > 0:
+      return math.sqrt(first)
+    else:
+      return "invalid input"
   
