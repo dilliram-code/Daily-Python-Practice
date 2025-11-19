@@ -21,7 +21,7 @@ class Library:
     self.books: List[Book] = []
     self.next_id = 1                # simple auto-incrementing id
 
-  def add_books(self, title: str, author:str):
+  def add_book(self, title: str, author:str):
     book = Book(self.next_id, title, author)
     self.books.append(book)
     self.next_id += 1
