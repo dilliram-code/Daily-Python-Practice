@@ -1,13 +1,11 @@
 def main():
-  pass
+  print("Running expense tracker!")
 
+  get_user_expense()
 
+  save_expense_to_file()
 
-
-
-
-
-
+  summarize_expenses()
 
 def get_user_expense():
   print(f"Getting User Expense!")
