@@ -33,3 +33,21 @@ def main():
     else:
       return "invalid input"
   
+  while True:
+    action = print('''
+          choose the action to perform:
+          1. add
+          2. subtract
+          3. multiply
+          4.divide
+          5.square root
+          ''')
+    if action == 'add':
+      result = addition()
+      print("The addition is: ", result)
+    elif action == "subtract":
+      result = subtraction()
+      print("The subtraction is: ", result)
+    elif action == 'multiply':
+      result = multiplication()
+      print("The multiplication is: ", result)
