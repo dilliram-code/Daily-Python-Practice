@@ -9,7 +9,9 @@ def main():
 
 def get_user_expense():
   print(f"Getting User Expense!")
-  pass
+  expense_name = input("enter your expense name: ").strip()
+  expense_amount = float(input("enter your expense amount: ").strip())
+  print(f"Your expense name {expense_name}, {expense_amount}")
 
 def save_expense_to_file():
   print(f"Saving User Expense!")
