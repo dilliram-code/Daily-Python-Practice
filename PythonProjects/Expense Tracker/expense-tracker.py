@@ -45,7 +45,11 @@ def save_expense_to_file(expense: Expense, expense_file_path):
 
 def summarize_expenses(expense_file_path):
   print(f"Summarizing User Expense!")
-  pass
+  expenses = []
+  with open(expense_file_path, "r") as f:
+    lines = f.readlines()
+    for line in lines:
+      print(line)
 
 if __name__ == "__main__":
   main()
