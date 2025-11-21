@@ -3,8 +3,10 @@ def main():
   print("Running expense tracker!")
 
   expense = get_user_expense()
+  # print(expense)                # debugging line
 
-  save_expense_to_file()
+  save_expense_to_file(expense)
+
 
   summarize_expenses()
 
@@ -29,15 +31,15 @@ def get_user_expense():
       print(f" {i + 1}.{category}")
     value_range = f"[1 - {len(expense_categories)}]"
     selected_index = int(input(f"enter a category number {value_range}:").strip())
-    selected_category = expense_categories[selected_index]
+    selected_category = expense_categories[selected_index-1]
 
     if selected_index in range(1,len(expense_categories)+1):
       new_expense = Expense(name=expense_name, category=selected_category, amount=expense_amount)
       return new_expense
     else:
       print("invalid entry, try again!")
-def save_expense_to_file():
-  print(f"Saving User Expense!")
+def save_expense_to_file(expense):
+  print(f"Saving User Expense: {expense}")
   pass
 
 def summarize_expenses():
