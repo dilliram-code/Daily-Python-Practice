@@ -1,7 +1,8 @@
+from expense import Expense
 def main():
   print("Running expense tracker!")
 
-  get_user_expense()
+  expense = get_user_expense()
 
   save_expense_to_file()
 
@@ -28,9 +29,11 @@ def get_user_expense():
       print(f" {i + 1}.{category}")
     value_range = f"[1 - {len(expense_categories)}]"
     selected_index = int(input(f"enter a category number {value_range}:").strip())
+    selected_category = expense_categories[selected_index]
 
     if selected_index in range(1,len(expense_categories)+1):
-      break
+      new_expense = Expense(name=expense_name, category=selected_category, amount=expense_amount)
+      return new_expense
     else:
       print("invalid entry, try again!")
 def save_expense_to_file():
