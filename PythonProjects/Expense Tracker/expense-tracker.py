@@ -45,7 +45,7 @@ def save_expense_to_file(expense: Expense, expense_file_path):
 
 def summarize_expenses(expense_file_path):
   print(f"Summarizing User Expense!")
-  expenses = []
+  expenses: list[Expense] = []
   with open(expense_file_path, "r") as f:
     lines = f.readlines()
     for line in lines:
@@ -57,5 +57,14 @@ def summarize_expenses(expense_file_path):
         )
       print(line_expense)
       expenses.append(line_expense)
+
+    amount_by_category = {}
+    for expense in expenses:
+      key = expense.category
+      if key in amount_by_category:
+        amount_by_category[key] += expense.amount
+      else:
+        amount_by_category[key] = expense.amount  
+    print(amount_by_category)
 if __name__ == "__main__":
   main()
