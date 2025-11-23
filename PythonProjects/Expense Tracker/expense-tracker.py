@@ -65,6 +65,8 @@ def summarize_expenses(expense_file_path):
         amount_by_category[key] += expense.amount
       else:
         amount_by_category[key] = expense.amount  
-    print(amount_by_category)
+    print("Expenses by category💹")
+    for key, amount in amount_by_category.items():
+      print(f"    {key}: ${amount}")
 if __name__ == "__main__":
   main()
