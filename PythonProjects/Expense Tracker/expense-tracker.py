@@ -1,5 +1,6 @@
 from expense import Expense
 def main():
+  budget = 2000
   print("Running expense tracker!")
   expense_file_path = "expenses.csv"
   expense = get_user_expense()
@@ -8,7 +9,7 @@ def main():
   save_expense_to_file(expense, expense_file_path)
 
 
-  summarize_expenses(expense_file_path)
+  summarize_expenses(expense_file_path, budget)
 
 def get_user_expense():
   print(f"Getting User Expense!")
@@ -43,7 +44,7 @@ def save_expense_to_file(expense: Expense, expense_file_path):
   with open(expense_file_path, "a") as f:
     f.write(f"{expense.name}, {expense.amount},{expense.category}\n")
 
-def summarize_expenses(expense_file_path):
+def summarize_expenses(expense_file_path, budget):
   print(f"Summarizing User Expense!")
   expenses: list[Expense] = []
   with open(expense_file_path, "r") as f:
@@ -68,5 +69,12 @@ def summarize_expenses(expense_file_path):
     print("Expenses by category💹")
     for key, amount in amount_by_category.items():
       print(f"    {key}: ${amount}")
+
+    total_spent = sum([float(x.amount) for x in expenses])
+    print(f"You've spent {total_spent} this month!")
+
+    remaining_budget = budget - total_spent
+    print(f"✅ Budget remaining: ${remaining_budget}.")
+
 if __name__ == "__main__":
   main()
