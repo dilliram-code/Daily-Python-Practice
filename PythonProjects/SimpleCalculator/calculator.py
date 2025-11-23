@@ -39,15 +39,27 @@ def main():
           1. add
           2. subtract
           3. multiply
-          4.divide
-          5.square root
+          4. divide
+          5. square_root
           ''')
-    if action == 'add':
+    if action == '1':
       result = addition()
       print("The addition is: ", result)
-    elif action == "subtract":
+    elif action == "2":
       result = subtraction()
       print("The subtraction is: ", result)
-    elif action == 'multiply':
+    elif action == '3':
       result = multiplication()
       print("The multiplication is: ", result)
+    elif action == '4':
+      result = division()
+      print("The division is: ", result)
+    elif action == '5':
+      result = square_root()
+      print("The square root is: ", square_root)
+    else:
+      print("Invalid input")
+      break
+
+# if __name__ == "__main__":
+#   main()
