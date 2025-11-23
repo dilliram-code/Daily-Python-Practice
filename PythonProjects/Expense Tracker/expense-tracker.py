@@ -1,4 +1,7 @@
 from expense import Expense
+import calendar
+import datetime
+
 def main():
   budget = 2000
   print("Running expense tracker!")
@@ -70,11 +73,23 @@ def summarize_expenses(expense_file_path, budget):
     for key, amount in amount_by_category.items():
       print(f"    {key}: ${amount}")
 
+    # calculate the total spent in this month
     total_spent = sum([float(x.amount) for x in expenses])
     print(f"You've spent {total_spent} this month!")
 
+    # get the remaining budget
     remaining_budget = budget - total_spent
     print(f"✅ Budget remaining: ${remaining_budget}.")
+
+    # get the current date
+    now = datetime.datetime.now()
+
+    # get the number of days in the current month
+    days_in_month = calendar.monthrange(now.year, now.month)[1]
+
+    # calculate the remaining number of days in the current month
+    remaining_days = days_in_month - now.day
+    print("Remaining days in the current month:", remaining_days)
 
 if __name__ == "__main__":
   main()
