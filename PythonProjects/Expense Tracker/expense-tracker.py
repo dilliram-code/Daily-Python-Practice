@@ -89,7 +89,10 @@ def summarize_expenses(expense_file_path, budget):
 
     # calculate the remaining number of days in the current month
     remaining_days = days_in_month - now.day
-    print("Remaining days in the current month:", remaining_days)
+    
+    # get the daily budget
+    daily_budget = remaining_budget/remaining_days
+    print(f"Budget per day: ${daily_budget}")
 
 if __name__ == "__main__":
   main()
