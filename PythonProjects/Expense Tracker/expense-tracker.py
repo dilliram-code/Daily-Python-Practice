@@ -7,10 +7,8 @@ def main():
   print("Running expense tracker!")
   expense_file_path = "expenses.csv"
   expense = get_user_expense()
-  # print(expense)                # debugging line
 
   save_expense_to_file(expense, expense_file_path)
-
 
   summarize_expenses(expense_file_path, budget)
 
@@ -19,7 +17,6 @@ def get_user_expense():
   expense_name = input("enter your expense name: ").strip()
   expense_amount = float(input("enter your expense amount: ").strip())
   print(f"Your expense name {expense_name}, {expense_amount}")
-
   expense_categories = [
     "🍔 Food",
     "🏠 Home",
@@ -27,13 +24,13 @@ def get_user_expense():
     "😝 Fun",
     "✨ Misc" 
   ]
-
   # display the categories
   while True:
     print("select a category:")
     for i, category in enumerate(expense_categories):
       print(f" {i + 1}.{category}")
     value_range = f"[1 - {len(expense_categories)}]"
+    
     selected_index = int(input(f"enter a category number {value_range}:").strip())
     selected_category = expense_categories[selected_index-1]
 
