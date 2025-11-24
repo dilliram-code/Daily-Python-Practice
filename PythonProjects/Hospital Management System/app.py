@@ -28,5 +28,8 @@ class Doctor(Person):
   def is_available(self, time_slot):
     return self.time_slot not in self.shedule
 
+  def add_appointment(self, time_slot):
+    self.shedule.append(time_slot)
+    
 person1 = Person("Dilli", "9803773533")
 print(person1)
