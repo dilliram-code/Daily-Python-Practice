@@ -24,7 +24,9 @@ class Doctor(Person):
     self.speciality = speciality
     self.role = "Doctor"
     self.shedule = []
-
+  
+  def is_available(self, time_slot):
+    return self.time_slot not in self.shedule
 
 person1 = Person("Dilli", "9803773533")
 print(person1)
