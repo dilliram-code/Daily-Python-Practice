@@ -17,5 +17,14 @@ class Person:
   def __str__(self):
     return f"{self.name} ({self.phone})"
 
+class Doctor(Person):
+  '''Doctor inherits from Person'''
+  def __init__(self, name, phone, speciality):
+    super().__init__(name, phone)
+    self.speciality = speciality
+    self.role = "Doctor"
+    self.shedule = []
+
+
 person1 = Person("Dilli", "9803773533")
 print(person1)
