@@ -22,7 +22,7 @@ class Doctor(Person):
   def __init__(self, name, phone, speciality):
     super().__init__(name, phone)
     self.speciality = speciality
-    self.role = "Doctor"
+    self.role = "Doctor"  
     self.shedule = []
   
   def is_available(self, time_slot):
@@ -30,6 +30,14 @@ class Doctor(Person):
 
   def add_appointment(self, time_slot):
     self.shedule.append(time_slot)
-    
+
+class Patient(Person):  
+  '''Patient inherits from Person + has encapsulated report'''
+  def __init__(self, name, phone, age):
+    super().__init__(name, phone)
+    self.age = age
+    self.role = "Patient"
+    self._report = None       # ENCAPSULATION
+
 person1 = Person("Dilli", "9803773533")
 print(person1)
