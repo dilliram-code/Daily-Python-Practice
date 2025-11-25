@@ -39,5 +39,18 @@ class Patient(Person):
     self.role = "Patient"
     self._report = None       # ENCAPSULATION
 
+    # Encapsulation: report accessible only through methods
+
+  # This method is often called setter
+  def self_report(self, text):
+    self._report = text
+
+  # This method is often called getter
+  def get_report(self):
+    if self._report:  
+      return self._report
+    return "No medical report found!"
+
+
 person1 = Person("Dilli", "9803773533")
 print(person1)
