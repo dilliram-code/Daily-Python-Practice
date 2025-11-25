@@ -68,5 +68,13 @@ class Hospital:
     doctor = self.doctors.get(doctor_id)
     patient = self.patients.get(patient_id)
 
+    if not doctor or not patient:
+      return "Doctor or Patient not found!"
+  
+    # check availability
+    if not doctor.is_available(time_slot):
+      return "Doctor is not available at this time."
+    
+
 person1 = Person("Dilli", "9803773533")
 print(person1)
