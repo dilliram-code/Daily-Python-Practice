@@ -75,6 +75,10 @@ class Hospital:
     if not doctor.is_available(time_slot):
       return "Doctor is not available at this time."
     
-
+    # book it
+    doctor.add_appointment(time_slot)
+    self.appointments.append(patient_id, doctor_id, time_slot)
+    return "Appointment booked successfully!"
+  
 person1 = Person("Dilli", "9803773533")
 print(person1)
