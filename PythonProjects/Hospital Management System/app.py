@@ -51,6 +51,22 @@ class Patient(Person):
       return self._report
     return "No medical report found!"
 
+class Hospital:
+  def __init__(self, name):
+    self.name = name  
+    self.doctors = {}
+    self.patients = {}
+    self.appointments = []
+
+  def add_doctor(self, doctor):
+    self.doctors[doctor.id] = doctor
+
+  def add_patient(self,patient):
+    self.patients[patient.id] = patient
+    
+  def book_appointment(self, patient_id, doctor_id, time_slot):
+    doctor = self.doctors.get(doctor_id)
+    patient = self.patients.get(patient_id)
 
 person1 = Person("Dilli", "9803773533")
 print(person1)
