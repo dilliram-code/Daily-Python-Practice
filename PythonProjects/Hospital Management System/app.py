@@ -99,6 +99,8 @@ class Bill:
   def add_item(self, desc, amount):
     self.items.append(desc, amount)
 
+  def total(self):
+    return sum(a for _, a in self.items)
 
 person1 = Person("Dilli", "9803773533")
 print(person1)
