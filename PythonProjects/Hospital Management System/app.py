@@ -80,5 +80,9 @@ class Hospital:
     self.appointments.append(patient_id, doctor_id, time_slot)
     return "Appointment booked successfully!"
   
+  def list_doctors(self):
+    for doc in self.doctors.values():
+      print(f"{doc.id} | {doc.name} | {doc.speciality} ")
+  
 person1 = Person("Dilli", "9803773533")
 print(person1)
