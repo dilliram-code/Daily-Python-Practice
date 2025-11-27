@@ -84,5 +84,9 @@ class Hospital:
     for doc in self.doctors.values():
       print(f"{doc.id} | {doc.name} | {doc.speciality} ")
   
+  def list_patients(self):
+    for pat in self.patients.values():
+      print(f"{pat.id} | {pat.name} | Age {pat.age}")
+      
 person1 = Person("Dilli", "9803773533")
 print(person1)
