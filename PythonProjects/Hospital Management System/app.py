@@ -102,5 +102,10 @@ class Bill:
   def total(self):
     return sum(a for _, a in self.items)
 
+  def show(self):
+    for desc, amt in self.items:
+      print(f"{desc}: Rs. {amt}")
+    print("Total:", self.total())
+    
 person1 = Person("Dilli", "9803773533")
 print(person1)
