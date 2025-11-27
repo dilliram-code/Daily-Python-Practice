@@ -87,6 +87,18 @@ class Hospital:
   def list_patients(self):
     for pat in self.patients.values():
       print(f"{pat.id} | {pat.name} | Age {pat.age}")
-      
+
+# Polymorphism: Bill System
+class Bill:
+  '''Base Bill'''
+  
+  def __init__(self, patient_id):
+    self.patient_id = patient_id
+    self.items = []
+  
+  def add_item(self, desc, amount):
+    self.items.append(desc, amount)
+
+
 person1 = Person("Dilli", "9803773533")
 print(person1)
