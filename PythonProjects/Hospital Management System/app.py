@@ -87,8 +87,11 @@ class Hospital:
   def list_patients(self):
     for pat in self.patients.values():
       print(f"{pat.id} | {pat.name} | Age {pat.age}")
-
+      
+# ----------------------------------------------------------
 # Polymorphism: Bill System
+# ----------------------------------------------------------
+
 class Bill:
   '''Base Bill'''
   
@@ -106,6 +109,12 @@ class Bill:
     for desc, amt in self.items:
       print(f"{desc}: Rs. {amt}")
     print("Total:", self.total())
-    
+
+class OutpatientBill(Bill):
+    """Polymorphism: outpatient has fixed consultation"""
+
+    def finalize(self):
+        self.add_item("Consultation Fee", 500)
+
 person1 = Person("Dilli", "9803773533")
 print(person1)
