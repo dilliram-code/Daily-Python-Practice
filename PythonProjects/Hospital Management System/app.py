@@ -116,5 +116,15 @@ class OutpatientBill(Bill):
     def finalize(self):
         self.add_item("Consultation Fee", 500)
 
+class InpatientBill(Bill):
+    """Polymorphism: inpatient has daily room charges"""
+
+    def __init__(self, patient_id, days):
+        super().__init__(patient_id)
+        self.days = days
+
+    def finalize(self):
+        self.add_item(f"Room Charge ({self.days} days)", self.days * 2000)
+
 person1 = Person("Dilli", "9803773533")
 print(person1)
