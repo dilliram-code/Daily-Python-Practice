@@ -2,7 +2,7 @@ class ATM:
   def __init__(self):
     self.balance = 0
 
-  def check_balance(self, balance):
+  def check_balance(self):
     print(f"Your current balance is ${self.balance}.")
   
   def deposit(self, amount):
@@ -23,7 +23,7 @@ class ATM:
 def main():
   atm = ATM()
   while True:
-    choice = input("choose an option: \n 1.check balance\n 2.deposit amount \n 3.withdraw amount \n  4.exit")
+    choice = input("choose an option: \n 1.check balance\n 2.deposit amount \n 3.withdraw amount\n 4.exit \n")
     if choice == '1':
       atm.check_balance()
     elif choice == '2':
