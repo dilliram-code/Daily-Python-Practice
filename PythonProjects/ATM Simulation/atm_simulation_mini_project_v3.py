@@ -24,7 +24,7 @@ class ATMController:
     self.atm = ATM()
 
   # get the input number for the deposit and withdraw functions
-  def get_number(prompt):
+  def get_number(self,prompt):
     while True:
       try:
         number = float(input(prompt))
@@ -32,14 +32,21 @@ class ATMController:
       except ValueError:
         print("please enter a valid number.")
 
-  def run(self):
+  # display menu function
+  def display_menu(self):
+    print('1.Check balance.')
+    print('2.Deposit')
+    print('3.Withdraw')
+    print('4.Exit')
+
+  # check balance
+  def check_balance(self):
+    balance = self.atm.check_balance()
+    print(f"Your account balance is ${balance}")
+
+  # deposit amount
+  def deposit(self):
     while True:
-      choice = input("choose an option: \n 1.check balance\n 2.deposit amount \n 3.withdraw amount\n 4.exit \n")
-      if choice == '1':
-        balance = self.atm.check_balance()
-        print(f"Your account balance is ${balance}")
-      elif choice == '2':
-        while True:
           try:
             amount = self.get_number(f"Enter the amount to be deposited.")
             self.atm.deposit(amount)
@@ -47,8 +54,8 @@ class ATMController:
             break
           except ValueError as error:
               print(error)
-      elif choice == '3':
-        while True:
+  def withdraw(self):
+    while True:
           try:
             amount = self.get_number("Enter the amount to withdraw.")
             self.atm.withdraw(amount)
@@ -56,13 +63,24 @@ class ATMController:
             break
           except ValueError as error:
             print(error)
+  def run(self):
+    while True:
+      self.display_menu()
+      choice = input('choose an option\n')
+      if choice == '1':
+        self.check_balance()
+      elif choice == '2':
+        self.deposit()
+      elif choice == '3':
+        self.withdraw()
       elif choice == '4':
         print('Thank you for using the ATM.')
         break 
       else:
         print("Invalid input. Please try again!")
 
-
-  def main():
-     atm = ATMController()
-     atm.run()
+def main():
+    atm = ATMController()
+    atm.run()
+if __name__ == '__main__':
+  main()
