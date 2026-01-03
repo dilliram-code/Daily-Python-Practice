@@ -4,19 +4,18 @@ class ATM:
 
   def check_balance(self):
     return self.balance
+  
   def deposit(self, amount):
     if amount <= 0:
       return False
     self.balance += amount
     return True    
+  
   def withdraw(self, amount):
-    if amount > self.balance:
-      print(f"Insufficient funds.")
-    elif amount < 0:
-      print("Withdrawl amount must be positive.")
-    else:
-      self.balance = self.balance - amount
-      print(f"Successfully withdrew ${amount}.")
+    if amount > self.balance and amount < 0:
+      return False
+    self.balance = self.balance - amount
+    return True
 
 def main():
   atm = ATM()
@@ -40,8 +39,14 @@ def main():
       while True:
         try:
           amount = float(input("Enter the amount to withdraw."))
-          atm.withdraw(amount)
-          break
+          if amount <= 0:
+            print("Withdrawl amount must be positive.")
+          elif amount > atm.check_balance():
+            print("Insufficient funds.")
+          else:
+            atm.withdraw(amount)
+            print(f"Successfully withdrew ${amount}.")
+            break
         except ValueError:
           print("Please enter a valid number.")
     elif choice == '4':
