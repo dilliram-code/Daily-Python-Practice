@@ -1,6 +1,3 @@
-# -----------------SEPARATION OF CONCERNS-------------- #
-# The logic part should separate from the UI part of the program.
-
 class ATM:
   def __init__(self):
     self.balance = 0
@@ -15,10 +12,11 @@ class ATM:
     return True    
   
   def withdraw(self, amount):
-    if amount > self.balance and amount < 0:
-      return False
+    if amount <= 0:
+      raise ValueError("Withdrawl amount must be positive.")
+    if amount > self.balance:
+      raise ValueError("Insufficient funds.")
     self.balance = self.balance - amount
-    return True
 
 def main():
   atm = ATM()
@@ -42,16 +40,11 @@ def main():
       while True:
         try:
           amount = float(input("Enter the amount to withdraw."))
-          if amount <= 0:
-            print("Withdrawl amount must be positive.")
-          elif amount > atm.check_balance():
-            print("Insufficient funds.")
-          else:
-            atm.withdraw(amount)
-            print(f"Successfully withdrew ${amount}.")
-            break
-        except ValueError:
-          print("Please enter a valid number.")
+          atm.withdraw(amount)
+          print(f"Successfully withdrew ${amount}.")
+          break
+        except ValueError as error:
+          print(error)
     elif choice == '4':
       print('Thank you for using the ATM.')
       break 
