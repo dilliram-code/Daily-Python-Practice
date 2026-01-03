@@ -5,11 +5,13 @@ class ATM:
   def check_balance(self):
     return self.balance
   def deposit(self, amount):
-    if amount > self.balance:
+    if amount > 0:
       self.balance += amount
-      print(f"Successfully deposited ${amount}.")
+      return True
+      # print(f"Successfully deposited ${amount}.")
     else:
-      print(f"Deposit amount must be positive.")
+      return False
+      # print(f"Deposit amount must be positive.")
   def withdraw(self, amount):
     if amount > self.balance:
       print(f"Insufficient funds.")
