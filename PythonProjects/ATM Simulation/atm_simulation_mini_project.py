@@ -16,3 +16,37 @@ class ATM:
       print(f"Insufficient funds.")
     elif amount < 0:
       print("Withdrawl amount must be positive.")
+    else:
+      self.balance = self.balance - amount
+      print(f"Successfully withdrew ${amount}.")
+
+def main():
+  atm = ATM()
+  while True:
+    choice = input("choose an option: \n 1.check balance\n 2.deposit amount \n 3.withdraw amount \n  4.exit")
+    if choice == '1':
+      atm.check_balance()
+    elif choice == '2':
+      while True:
+        try:
+          amount = float(input(f"Enter the amount to be deposited."))
+          atm.deposit(amount)
+          break
+        except ValueError:
+          print('please enter a valid number')
+    elif choice == '3':
+      while True:
+        try:
+          amount = float(input("Enter the amount to withdraw."))
+          atm.withdraw(amount)
+          break
+        except ValueError:
+          print("Please enter a valid number.")
+    elif choice == '4':
+      print('Thank you for using the ATM.')
+      break 
+    else:
+      print("Invalid input. Please try again!")
+
+if __name__ == "__main__":
+  main()
