@@ -6,7 +6,7 @@ class ATM:
     print(f"Your current balance is ${self.balance}.")
   
   def deposit(self, amount):
-    if amount > self.balance:
+    if amount > 0:
       self.balance += amount
       print(f"Successfully deposited ${amount}.")
     else:
