@@ -14,3 +14,19 @@
 #         Print a message
 #         Break
 #     Switch the current player
+
+
+# declare the board
+board = [
+  [' ',' ',' '],
+  [' ',' ',' '],
+  [' ',' ',' ']
+]
+
+def print_board(board):
+  line = '---+---+---'
+  for row in board:
+    print(line)
+    print(f' {row[0]} | {row[1]} | {row[2]} ')
+  print(line)
+print_board(board)
