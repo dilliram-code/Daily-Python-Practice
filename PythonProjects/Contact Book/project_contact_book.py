@@ -81,3 +81,10 @@ def menu() -> None:
 
 if __name__ == "__main__":
   menu()
+
+
+
+
+
+  shopping = [1,2]
+  shopping.c
