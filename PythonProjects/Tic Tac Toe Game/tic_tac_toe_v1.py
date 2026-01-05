@@ -46,6 +46,16 @@ def check_winner(board):
   if board[0][0] == board[1][1] == board[2][2] or \
   board[0][2] == board[1][1] == board[2][0] != ' ':
     return True
+  
+  # if no winner
+  return False
+
+# check whether the board is full
+def check_board(board):
+  for row in board:
+    if ' ' in row:
+      return False
+  return True
 
 def main():
   print_board(board)
@@ -62,9 +72,13 @@ def main():
     else:
       print("This spot is already taken.")
       continue
-
+    
+    # board fill up progress visualization
     print_board(board)
 
+    if check_winner(board):
+      print(f"Player {current_player} wins!")
+      break
 
 if __name__ == '__main__':
   main()
