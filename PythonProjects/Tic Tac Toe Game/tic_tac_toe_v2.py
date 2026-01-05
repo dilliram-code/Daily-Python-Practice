@@ -15,7 +15,8 @@
 #         Break
 #     Switch the current player
 
-# define const
+from termcolor import colored
+# define constants
 X = 'X'
 O = 'O'
 
@@ -30,8 +31,13 @@ def print_board(board):
   line = '---+---+---'
   for row in board:
     print(line)
-    print(f' {row[0]} | {row[1]} | {row[2]} ')
+    print(f' {cell(row[0])} | {cell(row[1])} | {cell(row[2])} ')
   print(line)
+
+# add color to the moves
+def cell(mark):
+  color = 'red' if mark == X else 'green'
+  return colored(mark,color)
 
 # check winner
 def check_winner(board):
@@ -79,6 +85,7 @@ def get_move(current_player):
       board[row][column] = current_player
       break
     print("This spot is already taken.")
+
 
 def main():
   print_board(board)
