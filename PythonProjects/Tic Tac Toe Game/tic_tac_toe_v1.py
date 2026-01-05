@@ -80,5 +80,13 @@ def main():
       print(f"Player {current_player} wins!")
       break
 
+    # check is board is full
+    if check_board(board):
+      print(f"Board is full.")
+      break
+    
+    # switch the current player
+    current_player = 'O' if current_player == 'X' else 'X'
+
 if __name__ == '__main__':
   main()
