@@ -58,38 +58,31 @@ def check_board(board):
   return True
 
 def get_position(promt):
-  try:
-    position = int(input(promt))
-    if position <0 or position >2:
-      raise ValueError
-    return position
-  except ValueError:
-    print("invalid input!")
+  while True:
+    try:
+      position = int(input(promt))
+      if position <0 or position >2:
+        raise ValueError
+      return position
+    except ValueError:
+      print("invalid input!")
+
 def get_move(current_player):
   print(f"Player {current_player}'s turn.")
   while True:
     row = get_position("enter row(0-2)")
     column = get_position("enter column(0-2)")
-
     if board[row][column] == ' ':
       board[row][column] = current_player
       break
+    print("This spot is already taken.")
 
 def main():
   print_board(board)
-
-
   current_player = 'X'
   while True:
-    print(f"Player {current_player}'s turn.")
-    row = int(input("enter row(0-2)"))
-    column = int(input("enter column(0-2)"))
-
-    if board[row][column] == ' ':
-      board[row][column] = current_player
-    else:
-      print("This spot is already taken.")
-      continue
+    # get the player's move
+    get_move(current_player)
     
     # board fill up progress visualization
     print_board(board)
