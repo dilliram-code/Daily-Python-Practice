@@ -57,6 +57,24 @@ def check_board(board):
       return False
   return True
 
+def get_position(promt):
+  try:
+    position = int(input(promt))
+    if position <0 or position >2:
+      raise ValueError
+    return position
+  except ValueError:
+    print("invalid input!")
+def get_move(current_player):
+  print(f"Player {current_player}'s turn.")
+  while True:
+    row = get_position("enter row(0-2)")
+    column = get_position("enter column(0-2)")
+
+    if board[row][column] == ' ':
+      board[row][column] = current_player
+      break
+
 def main():
   print_board(board)
 
@@ -76,11 +94,11 @@ def main():
     # board fill up progress visualization
     print_board(board)
 
-    if check_winner(board):     # if true, game end
+    if check_winner(board):
       print(f"Player {current_player} wins!")
       break
 
-    # check is board is full: game end
+    # check is board is full
     if check_board(board):
       print(f"Board is full.")
       break
