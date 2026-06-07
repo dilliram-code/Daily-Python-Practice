@@ -24,13 +24,23 @@
 #       ask the user if they want to playing continue
 #       If not
 #             break out of the loop
+def get_starting_balance():
+  while True:
+    try:
+      balance = int(input("Enter starting balance: $"))
+      if balance <= 0:
+        print("Balance must be a positive number.")
+      else:
+        return balance
+    except ValueError:
+      print("Please enter a valid number.")
+  
+
 def main():
-  try:
-    balance = int(input("Enter starting balance: $"))
-    if balance <= 0:
-      print("Balance must be a positive number.")
-  except ValueError:
-    print("Balance must be a positive number.")
+  balance = get_starting_balance()
+
+  print('Welcome you in slot machine game!')
+  print(f'start playing with the balance {balance}. \n')
 
 
 
