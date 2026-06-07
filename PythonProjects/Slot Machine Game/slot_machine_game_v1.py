@@ -59,6 +59,8 @@ def spin_reels():
   # [expression for item in iterable]
   return [random.choice(symbols) for _ in symbols]
 
+def display_reels(reels):
+  print(f'{reels[0]} | {reels[1]} | {reels[2]}')
 
 def main():
   balance = get_starting_balance()
@@ -73,6 +75,7 @@ def main():
     # get the bet amount
     bet = get_bet_amount(balance)
     reels = spin_reels()
+    display_reels(reels)
 
 
 
