@@ -24,6 +24,7 @@
 #       ask the user if they want to playing continue
 #       If not
 #             break out of the loop
+import random
 def get_starting_balance():
   while True:
     try:
@@ -46,6 +47,19 @@ def get_bet_amount(balance):
       except ValueError:
         print('Please enter a valid number for bet amount.')
 
+# ===========================SPIN WHEELS========================= #
+def spin_reels():
+  symbols = ['🍒', '🍋', '🔔', '⭐️', '🍉']
+  
+  # reels = []
+  # for _ in range(3):
+  #   reels.append(random.choice(symbols))
+  # return reels
+  
+  # [expression for item in iterable]
+  return [random.choice(symbols) for _ in symbols]
+
+
 def main():
   balance = get_starting_balance()
 
@@ -56,7 +70,9 @@ def main():
   while balance > 0:
     print(f'Your current balance is $ {balance}.')
     
-    
+    # get the bet amount
+    bet = get_bet_amount(balance)
+    reels = spin_reels()
 
 
 
