@@ -35,6 +35,16 @@ def get_starting_balance():
     except ValueError:
       print("Please enter a valid number.")
   
+def get_bet_amount(balance):
+  while True: 
+      try: 
+        bet = int(input('Enter your bet amount: \n'))
+        if bet > balance or bet <= 0:
+          print(f"Invalid bet amount. You can bet between $1 and ${balance}")
+        else:
+          return bet
+      except ValueError:
+        print('Please enter a valid number for bet amount.')
 
 def main():
   balance = get_starting_balance()
@@ -43,6 +53,10 @@ def main():
   print(f'start playing with the balance {balance}. \n')
 
 
+  while balance > 0:
+    print(f'Your current balance is $ {balance}.')
+    
+    
 
 
 
