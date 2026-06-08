@@ -93,6 +93,15 @@ def main():
     else:
       print('You lost!')
 
+    balance += payout - bet 
+    if balance <= 0:
+      print('You are out of money. Game over!')
+      break 
+    
+    play_again = input('Do you want to play again? (y/n): ').lower()
+    if play_again != 'y':
+      print(f'You walk away with $ {balance}.')
+      break 
 
 
 
