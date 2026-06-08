@@ -28,9 +28,9 @@ import random
 def get_starting_balance():
   while True:
     try:
-      balance = int(input("Enter starting balance: $"))
+      balance = int(input("Enter starting balance: $ \n"))
       if balance <= 0:
-        print("Balance must be a positive number.")
+        print("Balance must be a positive number. \n")
       else:
         return balance
     except ValueError:
@@ -102,9 +102,5 @@ def main():
     if play_again != 'y':
       print(f'You walk away with $ {balance}.')
       break 
-
-
-
-
 if __name__ == "__main__":
   main()
