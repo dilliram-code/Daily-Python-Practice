@@ -58,7 +58,7 @@ def spin_reels():
   # return reels
   
   # [expression for item in iterable]
-  return [random.choice(symbols) for _ in symbols]
+  return [random.choice(symbols) for _ in range(3)]
 
 # logic to display reels
 def display_reels(reels):
@@ -66,7 +66,7 @@ def display_reels(reels):
 
 # logic to calculate pay
 def calculate_pay(reels, bet):
-  if reels[0] == reels[1] == reels[3]:
+  if reels[0] == reels[1] == reels[2]:
     return bet * 10
   if reels[0] == reels[1] or reels[1]==reels[2] or reels[0]==reels[2]:
     return bet * 2
