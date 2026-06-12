@@ -9,12 +9,27 @@ class Player:
 class GuessNumberGame:
   total_games_played = 0
   
+  # initial initialization
   def __init__(self, player: Player, max_number: int = 10):
     self.player = player
     self.max_number = max_number
     self.secret_number = random.randint(1, max_number)
     self.attempts = 3
     GuessNumberGame.total_games_played += 1
+
+  # implement gameplay logic
+  def play(self):
+    print(f"\nWelcome {self.player.name}")
+    print(f"Guess a number between 1 and {self.max_number}")
+    print(f"You have {self.attempts}.\n")
+    
+    
+    
+  # get user guess
+  def get_user_guess(self):
+    pass 
+
+
 
 player1 = Player("Dilli")
 game = GuessNumberGame(player1)
