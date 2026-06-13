@@ -42,14 +42,15 @@ class GuessNumberGame:
     
   # get user guess
   def get_user_guess(self):
-    try:
-      guess = int(input("Enter your guess: "))
-      if self.is_valid_guess(guess, self.max_number):
-        return guess 
-      else:
-        print(f"Please enter a number between 1 to {self.max_number}.")
-    except ValueError:
-      print("Invalid input. Please enter a number")
+    while True:
+      try:
+        guess = int(input("Enter your guess: "))
+        if self.is_valid_guess(guess, self.max_number):
+          return guess 
+        else:
+          print(f"Please enter a number between 1 to {self.max_number}.")
+      except ValueError:
+        print("Invalid input. Please enter a number")
   
   # static method
   @staticmethod
@@ -63,5 +64,11 @@ class GuessNumberGame:
 
 
 player1 = Player("Dilli")
-game = GuessNumberGame(player1)
-print(game.secret_number)
+game = GuessNumberGame(player1, 10)
+
+# call the method for playing the game
+game.play()
+
+# get the player name with score
+print(f"\n{player1.name}'s score: {player1.score}")
+GuessNumberGame.show_total_games()        # since show_total_games is a class method 
