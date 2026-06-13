@@ -27,7 +27,14 @@ class GuessNumberGame:
     
   # get user guess
   def get_user_guess(self):
-    pass 
+    try:
+      guess = int(input("Enter your guess: "))
+      if self.is_valid_guess(guess, self.max_number):
+        return guess 
+      else:
+        print(f"Please enter a number between 1 to {self.max_number}.")
+    except ValueError:
+      print("Invalid input. Please enter a number")
   
   # static method
   @staticmethod
