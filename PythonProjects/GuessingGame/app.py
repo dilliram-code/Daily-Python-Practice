@@ -34,6 +34,10 @@ class GuessNumberGame:
   def is_valid_guess(guess, max_number):
     return 1 <= guess <= max_number
 
+  # class method 
+  @classmethod
+  def show_total_games(cls):
+    print(f"Total games played: {cls.total_games_played}")
 
 
 player1 = Player("Dilli")
