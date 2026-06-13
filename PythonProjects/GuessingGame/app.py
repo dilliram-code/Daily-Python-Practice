@@ -28,6 +28,11 @@ class GuessNumberGame:
   # get user guess
   def get_user_guess(self):
     pass 
+  
+  # static method
+  @staticmethod
+  def is_valid_guess(guess, max_number):
+    return 1 <= guess <= max_number
 
 
 
