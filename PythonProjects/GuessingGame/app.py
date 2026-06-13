@@ -30,7 +30,15 @@ class GuessNumberGame:
         print("Correct! you guess right.")
         self.player.score += 10
         return 
-    
+      elif guess < self.secret_number:
+        print("Too low!")
+      else:
+        print("Too high!")
+      
+      # any ways attempts decreases
+      self.attempts -= 1
+      print(f"Attempts left: {self.attempts}. \n")
+    print(f"Game over! The number was {self.secret_number}")
     
   # get user guess
   def get_user_guess(self):
