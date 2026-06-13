@@ -23,6 +23,13 @@ class GuessNumberGame:
     print(f"Guess a number between 1 and {self.max_number}")
     print(f"You have {self.attempts}.\n")
     
+    while self.attempts > 0:
+      guess = self.get_user_guess()
+      
+      if guess == self.secret_number:
+        print("Correct! you guess right.")
+        self.player.score += 10
+        return 
     
     
   # get user guess
