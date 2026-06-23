@@ -36,3 +36,21 @@ class BankAccount:
         if initial_balance > 0:
             self.transactions.append(
                 Transaction("OPEN", initial_balance)
+            )
+    
+    @property
+    def balance(self):
+        return self.__balance
+
+    def deposit(self, amount):
+
+        if amount <= 0:
+            raise ValueError("Deposit amount must be positive.")
+
+        self.__balance += amount
+
+        self.transactions.append(
+            Transaction("DEPOSIT", amount)
+        )
+
+        print(f"Rs.{amount} deposited successfully.")
