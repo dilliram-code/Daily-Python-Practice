@@ -21,7 +21,7 @@ class BankAccount:
     Base class for all bank accounts.
     """
 
-    bank_name = "Nepal National Bank"
+    bank_name = "Nepal Rastra Bank"
 
     total_accounts = 0
 
@@ -54,3 +54,4 @@ class BankAccount:
         )
 
         print(f"Rs.{amount} deposited successfully.")
+        ok
