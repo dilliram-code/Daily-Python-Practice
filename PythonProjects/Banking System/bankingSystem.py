@@ -54,4 +54,19 @@ class BankAccount:
         )
 
         print(f"Rs.{amount} deposited successfully.")
-        ok
+    
+    def withdraw(self, amount):
+
+        if amount <= 0:
+            raise ValueError("Withdrawal amount must be positive.")
+
+        if amount > self.__balance:
+            raise ValueError("Insufficient balance.")
+
+        self.__balance -= amount
+
+        self.transactions.append(
+            Transaction("WITHDRAW", amount)
+        )
+
+        print(f"Rs.{amount} withdrawn successfully.")
