@@ -9,3 +9,16 @@ async def fetch_student():
         "name": "Ram",
         "email": "ram@example.com"
     }
+
+async def fetch_courses():
+    print("Courses API: started")
+
+    await asyncio.sleep(3)
+
+    print("Courses API: finished")
+
+    return [
+        "Python",
+        "Machine Learning",
+        "Database"
+    ]
