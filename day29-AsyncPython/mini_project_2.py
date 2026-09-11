@@ -17,3 +17,12 @@ async def fetch_student():
     print("Student API: CANCELLED") 
     
     raise
+
+async def fetch_courses(): 
+  
+  print("Courses API: started") 
+  
+  await asyncio.sleep(1) 
+  
+  # Simulate an API failure 
+  raise RuntimeError("Courses API failed!")
