@@ -54,3 +54,5 @@ async def main():
     print(student_task.result())
     print(courses_task.result())
     print(attendance_task.result())
+
+asyncio.run(main())
