@@ -31,3 +31,26 @@ async def fetch_attendance():
     print("Attendance API: finished")
 
     return 87
+
+
+# structured concurrency:
+
+async def main():
+
+    async with asyncio.TaskGroup() as tg:
+
+        student_task = tg.create_task(
+            fetch_student()
+        )
+
+        courses_task = tg.create_task(
+            fetch_courses()
+        )
+
+        attendance_task = tg.create_task(
+            fetch_attendance()
+        )
+
+    print(student_task.result())
+    print(courses_task.result())
+    print(attendance_task.result())
