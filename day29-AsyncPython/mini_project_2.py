@@ -26,3 +26,13 @@ async def fetch_courses():
   
   # Simulate an API failure 
   raise RuntimeError("Courses API failed!")
+
+async def fetch_attendance(): 
+  print("Attendance API: started") 
+  try: 
+    await asyncio.sleep(5) 
+    print("Attendance API: finished") 
+    return 87 
+  except asyncio.CancelledError: 
+    print("Attendance API: CANCELLED") 
+    raise
