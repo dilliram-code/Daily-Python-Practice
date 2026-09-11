@@ -22,3 +22,12 @@ async def fetch_courses():
         "Machine Learning",
         "Database"
     ]
+
+async def fetch_attendance():
+    print("Attendance API: started")
+
+    await asyncio.sleep(1)
+
+    print("Attendance API: finished")
+
+    return 87
