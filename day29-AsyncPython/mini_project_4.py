@@ -17,3 +17,6 @@ async def main():
   
   print("All checks completed!")
   print("Results: ", results)
+  
+if __name__ == "__main__":
+  asyncio.run(main())
