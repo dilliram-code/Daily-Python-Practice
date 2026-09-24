@@ -50,3 +50,7 @@ async def main():
             
     total_time = time.time() - start_total
     print(f"\n⚡ Total execution time: {total_time:.2f} seconds")
+
+if __name__ == "__main__":
+    # The standard entry point to boot up the asyncio event loop
+    asyncio.run(main())
