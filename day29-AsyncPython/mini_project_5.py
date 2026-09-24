@@ -27,3 +27,26 @@ async def check_url(session: aiohttp.ClientSession, url: str) -> dict:
     except Exception as e:
         print(f"❌ Failed checking {url}: {type(e).__name__}")
         return {"url": url, "status": None, "latency": None, "error": type(e).__name__}
+
+async def main():
+    print(f"Starting status checks on {len(URLS)} URLs...")
+    start_total = time.time()
+
+    # Reuse a single ClientSession for optimal connection pooling
+    async with aiohttp.ClientSession() as session:
+        # 1. Create a list of async tasks (one for each URL)
+        tasks = [asyncio.create_task(check_url(session, url)) for url in URLS]
+        
+        # 2. Gather all tasks and run them concurrently
+        results = await asyncio.gather(*tasks)
+
+    # 3. Process and display metrics
+    print("\n=== Project Metrics Summary ===")
+    for res in results:
+        if res["error"]:
+            print(f"- {res['url']}: ERROR ({res['error']})")
+        else:
+            print(f"- {res['url']}: HTTP {res['status']} ({res['latency']:.2f}s)")
+            
+    total_time = time.time() - start_total
+    print(f"\n⚡ Total execution time: {total_time:.2f} seconds")
