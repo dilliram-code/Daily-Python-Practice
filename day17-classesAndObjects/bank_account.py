@@ -35,3 +35,7 @@ class BankAccount:
       self.balance -= amount  # Automatically triggers the getter and setter
       print(f"Withdrew ${amount:.2f}. Remaining balance: ${self.balance:.2f}")
 
+if __name__ == "__main__":
+  print("--- Creating Account with Invalid Balance ---")
+  account = BankAccount(owner="Alice", initial_balance=-500.0)
+  print(f"Current balance for {account.owner}: ${account.balance}\n")
