@@ -43,3 +43,7 @@ if __name__ == "__main__":
   print("--- Updating Balance Directly ---")
   account.balance = 250.0  # Uses setter
   print(f"Updated balance: ${account.balance}\n")  # Uses getter
+
+  print("--- Attempting Invalid Direct Assignment ---")
+  account.balance = -100.0  # Invalid input caught by setter
+  print(f"Current balance: ${account.balance}\n")
