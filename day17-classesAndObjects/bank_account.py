@@ -17,3 +17,10 @@ class BankAccount:
     else:
       self._balance = float(amount)
   
+  def deposit(self, amount: float):
+        """Deposits a positive amount into the account."""
+        if amount > 0:
+            self.balance += amount  # Automatically triggers the getter and setter
+            print(f"Deposited ${amount:.2f}. New balance: ${self.balance:.2f}")
+        else:
+            print("Error: Deposit amount must be positive.")
