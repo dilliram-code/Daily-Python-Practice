@@ -18,9 +18,20 @@ class BankAccount:
       self._balance = float(amount)
   
   def deposit(self, amount: float):
-        """Deposits a positive amount into the account."""
-        if amount > 0:
-            self.balance += amount  # Automatically triggers the getter and setter
-            print(f"Deposited ${amount:.2f}. New balance: ${self.balance:.2f}")
-        else:
-            print("Error: Deposit amount must be positive.")
+    """Deposits a positive amount into the account."""
+    if amount > 0:
+      self.balance += amount  # Automatically triggers the getter and setter
+      print(f"Deposited ${amount:.2f}. New balance: ${self.balance:.2f}")
+    else:
+      print("Error: Deposit amount must be positive.")
+  
+  def withdraw(self, amount: float):
+    """Withdraws money if sufficient balance is available."""
+    if amount <= 0:
+      print("Error: Withdrawal amount must be positive.")
+    elif amount > self.balance:
+      print(f"Error: Insufficient funds! Current balance: ${self.balance:.2f}")
+    else:
+      self.balance -= amount  # Automatically triggers the getter and setter
+      print(f"Withdrew ${amount:.2f}. Remaining balance: ${self.balance:.2f}")
+
