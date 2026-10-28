@@ -47,3 +47,9 @@ if __name__ == "__main__":
   print("--- Attempting Invalid Direct Assignment ---")
   account.balance = -100.0  # Invalid input caught by setter
   print(f"Current balance: ${account.balance}\n")
+  
+  print("--- Performing Transactions ---")
+  account.balance = 1000.0  # Set valid initial amount
+  account.deposit(500.0)
+  account.withdraw(200.0)
+  account.withdraw(2000.0)  # Exceeds available balance
