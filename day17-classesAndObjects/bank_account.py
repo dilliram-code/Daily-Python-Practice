@@ -39,3 +39,7 @@ if __name__ == "__main__":
   print("--- Creating Account with Invalid Balance ---")
   account = BankAccount(owner="Alice", initial_balance=-500.0)
   print(f"Current balance for {account.owner}: ${account.balance}\n")
+
+  print("--- Updating Balance Directly ---")
+  account.balance = 250.0  # Uses setter
+  print(f"Updated balance: ${account.balance}\n")  # Uses getter
